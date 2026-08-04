@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="機械智造轉型服務據點動態列表">
+  <title>據點動態｜機械智造轉型服務據點</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/news.css">
+</head>
+
+<body data-page="updates">
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <!-- Phase 1 靜態共用骨架：此 Header 是目前內頁導覽維護基準。 -->
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../assets/images/logo.png" alt="機械智造轉型服務據點標誌">
+        <span class="brand-copy">
+          <strong class="brand-title">機械智造轉型服務據點－訓練資源地圖</strong>
+          <span class="brand-subtitle">Intelligent Machinery Regional Industry Training Center For Mapping Resources</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer"
+        aria-controls="mobileNavDrawer" aria-label="開啟主選單">
+        <svg viewBox="0 0 640 640" aria-hidden="true">
+          <path d="M96 160C96 142.3 110.3 128 128 128H512C529.7 128 544 142.3 544 160S529.7 192 512 192H128C110.3 192 96 177.7 96 160ZM96 320C96 302.3 110.3 288 128 288H512C529.7 288 544 302.3 544 320S529.7 352 512 352H128C110.3 352 96 337.7 96 320ZM96 480C96 462.3 110.3 448 128 448H512C529.7 448 544 462.3 544 480S529.7 512 512 512H128C110.3 512 96 497.7 96 480Z" />
+        </svg>
+      </button>
+
+      <nav class="desktop-nav" aria-label="主選單">
+        <ul class="desktop-nav-list">
+          <li><a class="desktop-nav-link" href="../index.html">首頁</a></li>
+          <li class="dropdown nav-dropdown"><a class="desktop-nav-link dropdown-toggle" href="about.html" id="updateAboutDropdown">據點介紹</a><ul class="dropdown-menu" aria-labelledby="updateAboutDropdown"><li><a class="dropdown-item" href="about.html#goals">計畫緣起與目標</a></li><li><a class="dropdown-item" href="about.html#services">服務對象與範圍</a></li></ul></li>
+          <li class="dropdown nav-dropdown">
+            <a class="desktop-nav-link dropdown-toggle" href="update.html" id="updateNavDropdown"
+              data-nav="updates">據點動態</a>
+            <ul class="dropdown-menu" aria-labelledby="updateNavDropdown">
+              <li><a class="dropdown-item" href="update.html?category=news" data-category-link="news">最新消息</a></li>
+              <li><a class="dropdown-item" href="update.html?category=jobs" data-category-link="jobs">廠商職缺</a></li>
+              <li><a class="dropdown-item" href="update.html?category=gallery" data-category-link="gallery">活動花絮</a></li>
+              <li><a class="dropdown-item" href="update.html?category=courses" data-category-link="courses">課程招生</a></li>
+            </ul>
+          </li>
+          <li><a class="desktop-nav-link" href="insights.html">趨勢知識</a></li>
+          <li><a class="desktop-nav-link" href="training.html">訓練資源</a></li>
+          <li><a class="desktop-nav-link" href="videos.html">影片專區</a></li>
+          <li><a class="desktop-nav-link" href="contact.html">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end mobile-drawer" tabindex="-1" id="mobileNavDrawer"
+    aria-labelledby="mobileNavDrawerLabel">
+    <div class="offcanvas-header">
+      <h2 class="mobile-drawer-title" id="mobileNavDrawerLabel">機械智造轉型服務據點</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="關閉"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="mobile-nav" id="mobileNavAccordion" aria-label="手機主選單">
+        <a class="mobile-nav-link" href="../index.html">首頁</a>
+        <button class="mobile-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileUpdateAbout" aria-expanded="false" aria-controls="mobileUpdateAbout">據點介紹</button>
+        <div class="collapse mobile-subnav" id="mobileUpdateAbout" data-bs-parent="#mobileNavAccordion"><a class="mobile-subnav-link" href="about.html#goals">計畫緣起與目標</a><a class="mobile-subnav-link" href="about.html#services">服務對象與範圍</a></div>
+        <button class="mobile-nav-toggle is-active" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNewsGroup"
+          aria-expanded="true" aria-controls="mobileNewsGroup">據點動態</button>
+        <div class="collapse show mobile-subnav" id="mobileNewsGroup" data-bs-parent="#mobileNavAccordion">
+          <a class="mobile-subnav-link" href="update.html?category=news" data-category-link="news">最新消息</a>
+          <a class="mobile-subnav-link" href="update.html?category=jobs" data-category-link="jobs">廠商職缺</a>
+          <a class="mobile-subnav-link" href="update.html?category=gallery" data-category-link="gallery">活動花絮</a>
+          <a class="mobile-subnav-link" href="update.html?category=courses" data-category-link="courses">課程招生</a>
+        </div>
+        <a class="mobile-nav-link" href="insights.html">趨勢知識</a>
+        <a class="mobile-nav-link" href="training.html">訓練資源</a>
+        <a class="mobile-nav-link" href="videos.html">影片專區</a>
+        <a class="mobile-nav-link" href="contact.html">聯絡我們</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="page-banner" aria-labelledby="page-banner-title">
+    <div class="site-container page-banner-inner">
+      <div>
+        <span class="page-banner-kicker">Updates</span>
+        <p class="page-banner-title" id="page-banner-title">據點動態</p>
+      </div>
+      <span class="page-banner-mark" aria-hidden="true">UPDATE</span>
+    </div>
+  </section>
+
+  <div class="breadcrumb-wrap">
+    <nav class="site-container" aria-label="麵包屑">
+      <ol class="site-breadcrumb">
+        <li><a href="../index.html">首頁</a></li>
+        <li aria-current="page">據點動態</li>
+      </ol>
+    </nav>
+  </div>
+
+  <main class="site-main" id="main-content">
+    <div class="site-container">
+      <section class="region-results" id="regionResults" aria-labelledby="regionResultsTitle" hidden>
+        <div class="region-results-heading">
+          <div>
+            <p class="region-results-kicker">區域累計成果</p>
+            <p class="region-results-title" id="regionResultsTitle">區域成果</p>
+          </div>
+          <p class="region-results-period" id="regionResultsPeriod"></p>
+        </div>
+        <dl class="region-results-metrics">
+          <div><dt>累計課程數</dt><dd><strong id="regionCoursesCount">0</strong><span>堂</span></dd></div>
+          <div><dt>累計參訓人次</dt><dd><strong id="regionParticipantsCount">0</strong><span>人</span></dd></div>
+          <div><dt>累計職缺數</dt><dd><strong id="regionJobsCount">0</strong><span>筆</span></dd></div>
+        </dl>
+        <p class="region-results-note" id="regionResultsNote"></p>
+      </section>
+
+      <div class="update-toolbar d-flex align-items-center justify-content-between">
+        <nav aria-label="據點動態分類">
+          <ul class="update-category-nav">
+            <li><a class="update-category-link" href="update.html" data-category-link="all"><span data-category-label>全部動態</span></a></li>
+            <li><a class="update-category-link" href="update.html?category=news" data-category-link="news">最新消息</a></li>
+            <li><a class="update-category-link" href="update.html?category=jobs" data-category-link="jobs">廠商職缺</a></li>
+            <li><a class="update-category-link" href="update.html?category=gallery" data-category-link="gallery">活動花絮</a></li>
+            <li><a class="update-category-link" href="update.html?category=courses" data-category-link="courses">課程招生</a></li>
+          </ul>
+        </nav>
+        <form class="update-search" id="updateSearchForm" role="search">
+          <label class="visually-hidden" for="updateKeyword">搜尋據點動態</label>
+          <input class="update-search-input" id="updateKeyword" name="q" type="search"
+            placeholder="輸入關鍵字" autocomplete="off">
+          <button class="site-button update-search-button" type="submit">搜尋</button>
+          <a class="update-search-clear" id="updateSearchClear" href="update.html" hidden>清除</a>
+        </form>
+      </div>
+
+      <div class="update-result-heading page-title">
+        <div>
+          <h1 id="updateResultTitle">全部動態</h1>
+          <p id="updatePageDescription">依發布日期顯示所有據點動態。</p>
+        </div>
+        <p class="update-result-count" id="updateResultCount">共 0 筆</p>
+      </div>
+
+      <section class="news-panel" aria-labelledby="updateResultTitle">
+        <ol class="news-list" id="updateList"></ol>
+      </section>
+
+      <nav class="news-pagination" id="updatePagination" aria-label="據點動態分頁"></nav>
+
+      <section class="empty-state" id="updateEmptyState" aria-label="空資料狀態" hidden>
+        <span class="empty-state-icon" aria-hidden="true">i</span>
+        <h2>此分類目前尚無資料</h2>
+        <p>請切換其他動態分類，或稍後再回來查看。</p>
+        <a class="site-button site-button-secondary" id="updateEmptyReset" href="update.html" hidden>清除搜尋條件</a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Phase 1 靜態共用骨架：此 Footer 是目前內頁維護基準。 -->
+  <footer class="site-footer">
+    <div class="site-container footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="../assets/images/logo-2.png" alt="">
+        <div>
+          <p class="footer-brand-title">機械智造轉型服務據點<br>訓練資源地圖</p>
+          <p class="footer-brand-subtitle">Intelligent Machinery Regional Industry Training Center For Mapping Resources</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="頁尾據點介紹">
+        <h2>據點介紹</h2>
+        <a href="about.html#goals">計畫緣起與目標</a>
+        <a href="about.html#services">服務對象與範圍</a>
+      </nav>
+      <nav class="footer-nav" aria-label="頁尾據點動態">
+        <h2>據點動態</h2>
+        <a href="update.html?category=news">最新消息</a>
+        <a href="update.html?category=jobs">廠商職缺</a>
+        <a href="update.html?category=gallery">活動花絮</a>
+        <a href="update.html?category=courses">課程招生</a>
+      </nav>
+      <div class="footer-nav">
+        <h2>訓練資源</h2>
+        <a href="training.html?status=open">熱門課程</a>
+        <a href="training.html">全部課程</a>
+        <div class="footer-social">
+          <a class="fb" href="#" aria-label="Facebook"></a>
+          <a class="ig" href="#" aria-label="Instagram"></a>
+          <a class="line" href="#" aria-label="LINE"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="privacy.html">隱私權政策</a> ｜ Copyright © 2026 產業人才培訓據點計畫 版權所有
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="回到頁面頂端">
+    <svg viewBox="0 0 640 640" aria-hidden="true">
+      <path d="M297.4 150.6C309.9 138.1 330.2 138.1 342.7 150.6L534.7 342.6C547.2 355.1 547.2 375.4 534.7 387.9C522.2 400.4 501.9 400.4 489.4 387.9L352 250.5V520C352 537.7 337.7 552 320 552S288 537.7 288 520V250.5L150.6 387.9C138.1 400.4 117.8 400.4 105.3 387.9S92.8 355.1 105.3 342.6L297.4 150.6Z" />
+    </svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/course-status.js"></script>
+  <script src="../assets/js/count-up.js"></script>
+  <script src="../assets/js/update.js"></script>
+  <script src="../assets/js/release-scope.js"></script>
+</body>
+
+</html>

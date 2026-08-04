@@ -1,0 +1,243 @@
+.about-content {
+  width: 100%;
+  padding: 34px clamp(22px, 5vw, 56px);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.about-content section {
+  scroll-margin-top: 104px;
+}
+
+.about-content section + section {
+  padding-top: 18px;
+  margin-top: 38px;
+  border-top: 1px solid var(--line);
+}
+
+.about-content h2 {
+  margin: 0 0 18px;
+  color: var(--blue-800);
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 900;
+}
+
+.about-content h2::after {
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 10px;
+  background: var(--orange);
+  border-radius: 999px;
+  content: "";
+}
+
+.about-content h3 {
+  margin: 28px 0 8px;
+  color: var(--blue-800);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.about-content p {
+  margin: 0 0 16px;
+  color: #334155;
+}
+
+.about-content ul {
+  display: grid;
+  gap: 13px;
+  padding-left: 1.4rem;
+  margin: 0;
+}
+
+.about-content li {
+  padding-left: 4px;
+}
+
+.about-content li::marker {
+  color: var(--orange);
+}
+
+.about-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.about-audience-item {
+  padding: 24px 18px;
+  text-align: center;
+  background: #f7f9fc;
+  border-radius: 12px;
+}
+
+.about-icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  color: var(--orange);
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgb(15 45 84 / 10%);
+  place-items: center;
+}
+
+.about-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.about-audience-item h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.about-audience-item p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.about-scope-title {
+  margin-top: 40px;
+}
+
+.about-scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.about-scope-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 18px;
+  color: var(--blue-800);
+  background: #eef3f8;
+  border-radius: 10px;
+}
+
+.about-scope-item span {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.about-core-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.about-core-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  padding: 28px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff 0%, #f4f7fb 100%);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-core-item::before {
+  position: absolute;
+  top: 0;
+  right: 28px;
+  width: 54px;
+  height: 4px;
+  background: var(--blue-800);
+  content: "";
+}
+
+.about-core-item:hover {
+  box-shadow: 0 14px 30px rgb(15 45 84 / 12%);
+  transform: translateY(-3px);
+}
+
+.about-core-icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  background: var(--orange);
+  border-radius: 12px;
+  place-items: center;
+}
+
+.about-core-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.about-core-item h3 {
+  margin: 0 0 9px;
+  font-size: 20px;
+}
+
+.about-core-item p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #64748b;
+}
+
+@media (max-width: 991px) {
+  .about-audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .about-content {
+    padding: 25px 20px;
+  }
+
+  .about-content section {
+    scroll-margin-top: 90px;
+  }
+
+  .about-audience-grid,
+  .about-scope-grid,
+  .about-core-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-audience-item {
+    padding: 20px 16px;
+  }
+
+  .about-core-item {
+    gap: 16px;
+    padding: 22px 18px;
+  }
+
+  .about-core-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-core-item {
+    transition: none;
+  }
+}

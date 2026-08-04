@@ -1,0 +1,28 @@
+{
+  "regions": [
+    {
+      "code": "taichung",
+      "name": "臺中市",
+      "statisticsAsOf": "2026-06-30",
+      "periodLabel": "據點成立至 2026 年 6 月 30 日",
+      "statistics": {"courses": 128, "participants": 3256, "jobs": 1248},
+      "note": "本區數據為歷年累計成果，與目前平台公開上架筆數可能不同。"
+    },
+    {
+      "code": "changhua",
+      "name": "彰化縣",
+      "statisticsAsOf": "2026-06-30",
+      "periodLabel": "據點成立至 2026 年 6 月 30 日",
+      "statistics": {"courses": 86, "participants": 2143, "jobs": 986},
+      "note": "本區數據為歷年累計成果，與目前平台公開上架筆數可能不同。"
+    },
+    {
+      "code": "nantou",
+      "name": "南投縣",
+      "statisticsAsOf": "2026-06-30",
+      "periodLabel": "據點成立至 2026 年 6 月 30 日",
+      "statistics": {"courses": 64, "participants": 1587, "jobs": 742},
+      "note": "本區數據為歷年累計成果，與目前平台公開上架筆數可能不同。"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+:root {
+  --blue-900: #05254a;
+  --blue-800: #073d7a;
+  --blue-700: #0b4f93;
+  --blue-600: #0c78c7;
+  --orange: #f39800;
+  --orange-dark: #df6b00;
+  --green: #16835a;
+  --bg: #f3f6fa;
+  --text: #1e293b;
+  --muted: #64748b;
+  --line: #dbe3ee;
+  --card: #fff;
+  --shadow: 0 8px 22px rgba(15, 35, 70, 0.09);
+  --content-width: 1220px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue-700);
+}
+
+.site-container {
+  width: min(100% - 48px, var(--content-width));
+  margin-inline: auto;
+}
+
+.site-main {
+  min-height: 50vh;
+  padding: 34px 0 72px;
+}
+
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .site-container {
+    width: min(100% - 32px, var(--content-width));
+  }
+
+  .site-main {
+    padding: 24px 0 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
