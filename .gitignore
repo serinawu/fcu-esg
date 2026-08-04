@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Editor settings
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Dependencies
+node_modules/
+
+# Local ASP.NET configuration
+appsettings.Development.json
+appsettings.Local.json
