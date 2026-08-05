@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const url = new URL(link.href, window.location.href);
     const page = url.pathname.split("/").pop();
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
-    const isHomepageCourseDetail = currentPage === "index.html" && page === "training-detail.html";
+    const publicHomepageCourseIds = new Set(["courses-005", "courses-006"]);
+    const isHomepageCourseDetail = currentPage === "index.html"
+      && page === "training-detail.html"
+      && !publicHomepageCourseIds.has(url.searchParams.get("id"));
     if (!unavailablePages.has(page) && !isHomepageCourseDetail) return;
 
     link.removeAttribute("href");

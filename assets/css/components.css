@@ -492,6 +492,40 @@
   background: #fff0dc;
 }
 
+.training-status-badge {
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.training-status-open {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.training-status-upcoming {
+  color: #6b21a8;
+  background: #f3e8ff;
+}
+
+.training-status-closed,
+.training-status-ended {
+  color: #475569;
+  background: #e9eef3;
+}
+
+.training-status-ongoing {
+  color: #075985;
+  background: #e0f2fe;
+}
+
+.training-status-cancelled {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
 .site-footer {
   color: #dce8f5;
   background: var(--blue-900);

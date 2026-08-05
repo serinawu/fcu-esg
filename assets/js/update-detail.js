@@ -114,7 +114,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (expectedType === "courses") {
     const status = window.FCUCourseStatus.getStatus(item);
-    setText("[data-course-status]", window.FCUCourseStatus.definitions[status].label);
+    const statusBadge = document.querySelector("[data-course-status]");
+    if (statusBadge) {
+      Array.from(statusBadge.classList)
+        .filter((className) => className.startsWith("training-status-") && className !== "training-status-badge")
+        .forEach((className) => statusBadge.classList.remove(className));
+      statusBadge.classList.add("training-status-badge", `training-status-${status}`);
+      statusBadge.textContent = window.FCUCourseStatus.definitions[status].label;
+    }
     const fields = {
       provider: item.detail.provider,
       deliveryMode: item.detail.deliveryMode,
