@@ -70,19 +70,3 @@
     ├── courses.json
     └── region-statistics.json
 ```
-
-## 本機預覽
-
-頁面會透過 `fetch` 讀取 JSON 資料，因此不能直接以 `file://` 開啟。請在 repository 根目錄啟動 HTTP server：
-
-```bash
-python3 -m http.server 8000
-```
-
-再開啟 <http://localhost:8000/>。
-
-部分樣式與示意圖片使用外部 CDN／HTTPS 圖片來源，預覽時需要網路連線。
-
-## GitHub Pages
-
-GitHub Pages 的發佈來源請選擇要公開的分支，目錄選擇 `/ (root)`。
