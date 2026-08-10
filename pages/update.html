@@ -121,38 +121,38 @@
         <p class="region-results-note" id="regionResultsNote"></p>
       </section>
 
-      <div class="update-toolbar d-flex align-items-center justify-content-between">
+      <div class="site-toolbar update-toolbar">
         <nav aria-label="據點動態分類">
-          <ul class="update-category-nav">
-            <li><a class="update-category-link" href="update.html" data-category-link="all"><span data-category-label>全部動態</span></a></li>
-            <li><a class="update-category-link" href="update.html?category=news" data-category-link="news">最新消息</a></li>
-            <li><a class="update-category-link" href="update.html?category=jobs" data-category-link="jobs">廠商職缺</a></li>
-            <li><a class="update-category-link" href="update.html?category=gallery" data-category-link="gallery">活動花絮</a></li>
-            <li><a class="update-category-link" href="update.html?category=courses" data-category-link="courses">課程招生</a></li>
+          <ul class="site-filter-nav update-category-nav">
+            <li><a class="site-filter-link update-category-link" href="update.html" data-category-link="all"><span data-category-label>全部動態</span></a></li>
+            <li><a class="site-filter-link update-category-link" href="update.html?category=news" data-category-link="news">最新消息</a></li>
+            <li><a class="site-filter-link update-category-link" href="update.html?category=jobs" data-category-link="jobs">廠商職缺</a></li>
+            <li><a class="site-filter-link update-category-link" href="update.html?category=gallery" data-category-link="gallery">活動花絮</a></li>
+            <li><a class="site-filter-link update-category-link" href="update.html?category=courses" data-category-link="courses">課程招生</a></li>
           </ul>
         </nav>
-        <form class="update-search" id="updateSearchForm" role="search">
+        <form class="site-search update-search" id="updateSearchForm" role="search">
           <label class="visually-hidden" for="updateKeyword">搜尋據點動態</label>
-          <input class="update-search-input" id="updateKeyword" name="q" type="search"
+          <input class="site-search-input update-search-input" id="updateKeyword" name="q" type="search"
             placeholder="輸入關鍵字" autocomplete="off">
           <button class="site-button update-search-button" type="submit">搜尋</button>
           <a class="update-search-clear" id="updateSearchClear" href="update.html" hidden>清除</a>
         </form>
       </div>
 
-      <div class="update-result-heading page-title">
+      <div class="site-result-heading update-result-heading page-title">
         <div>
           <h1 id="updateResultTitle">全部動態</h1>
           <p id="updatePageDescription">依發布日期顯示所有據點動態。</p>
         </div>
-        <p class="update-result-count" id="updateResultCount">共 0 筆</p>
+        <p class="site-result-count update-result-count" id="updateResultCount">共 0 筆</p>
       </div>
 
       <section class="news-panel" aria-labelledby="updateResultTitle">
         <ol class="news-list" id="updateList"></ol>
       </section>
 
-      <nav class="news-pagination" id="updatePagination" aria-label="據點動態分頁"></nav>
+      <nav class="site-pagination news-pagination" id="updatePagination" aria-label="據點動態分頁"></nav>
 
       <section class="empty-state" id="updateEmptyState" aria-label="空資料狀態" hidden>
         <span class="empty-state-icon" aria-hidden="true">i</span>
@@ -164,41 +164,52 @@
   </main>
 
   <!-- Phase 1 靜態共用骨架：此 Footer 是目前內頁維護基準。 -->
+
   <footer class="site-footer">
-    <div class="site-container footer-grid">
+    <div class="site-container footer-main">
       <div class="footer-brand">
         <img class="footer-logo" src="../assets/images/logo-2.png" alt="">
         <div>
-          <p class="footer-brand-title">機械智造轉型服務據點<br>訓練資源地圖</p>
+          <p class="footer-brand-title">機械智造轉型服務據點訓練資源地圖</p>
           <p class="footer-brand-subtitle">Intelligent Machinery Regional Industry Training Center For Mapping Resources</p>
         </div>
       </div>
-      <nav class="footer-nav" aria-label="頁尾據點介紹">
-        <h2>據點介紹</h2>
-        <a href="about.html#goals">計畫緣起與目標</a>
-        <a href="about.html#services">服務對象與範圍</a>
+      <nav class="footer-navigation" aria-label="頁面導覽">
+        <details class="footer-nav footer-nav-group">
+          <summary class="footer-nav-summary">據點介紹</summary>
+          <a href="about.html#goals">計畫緣起與目標</a>
+          <a href="about.html#services">服務對象與範圍</a>
+        </details>
+        <details class="footer-nav footer-nav-group">
+          <summary class="footer-nav-summary">據點動態</summary>
+          <a href="update.html?category=news">最新消息</a>
+          <a href="update.html?category=jobs">廠商職缺</a>
+          <a href="update.html?category=gallery">活動花絮</a>
+          <a href="update.html?category=courses">課程招生</a>
+        </details>
+        <details class="footer-nav footer-nav-group">
+          <summary class="footer-nav-summary">趨勢知識</summary>
+          <a href="insights.html">相關專欄文章</a>
+        </details>
+        <details class="footer-nav footer-nav-group">
+          <summary class="footer-nav-summary">訓練資源</summary>
+          <a href="training.html?status=open">熱門課程</a>
+          <a href="training.html">全部課程</a>
+        </details>
       </nav>
-      <nav class="footer-nav" aria-label="頁尾據點動態">
-        <h2>據點動態</h2>
-        <a href="update.html?category=news">最新消息</a>
-        <a href="update.html?category=jobs">廠商職缺</a>
-        <a href="update.html?category=gallery">活動花絮</a>
-        <a href="update.html?category=courses">課程招生</a>
-      </nav>
-      <div class="footer-nav">
-        <h2>訓練資源</h2>
-        <a href="training.html?status=open">熱門課程</a>
-        <a href="training.html">全部課程</a>
-        <div class="footer-social">
-          <a class="fb" href="#" aria-label="Facebook"></a>
-          <a class="ig" href="#" aria-label="Instagram"></a>
-          <a class="line" href="#" aria-label="LINE"></a>
+      <div class="footer-nav footer-side">
+        <h2>網站瀏覽人次</h2>
+        <div class="footer-counter" aria-label="網站瀏覽人次 012345">
+          <span aria-hidden="true">0</span><span aria-hidden="true">1</span><span aria-hidden="true">2</span><span aria-hidden="true">3</span><span aria-hidden="true">4</span><span aria-hidden="true">5</span>
+        </div>
+        <div class="footer-social footer-social-static" aria-label="社群媒體">
+          <span class="fb" role="img" aria-label="Facebook 連結待提供"></span>
+          <span class="ig" role="img" aria-label="Instagram 連結待提供"></span>
+          <span class="line" role="img" aria-label="LINE 連結待提供"></span>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <a href="privacy.html">隱私權政策</a> ｜ Copyright © 2026 產業人才培訓據點計畫 版權所有
-    </div>
+    <div class="footer-bottom"><a href="privacy.html">隱私權政策</a><span>Copyright © 2026 產業人才培訓據點計畫 版權所有</span></div>
   </footer>
 
   <button class="back-to-top" type="button" aria-label="回到頁面頂端">

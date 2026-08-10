@@ -163,41 +163,52 @@
   </main>
 
   <!-- Phase 1 靜態共用骨架：Footer 唯一維護基準請參照 update.html，修改時同步本頁。 -->
+
   <footer class="site-footer">
-    <div class="site-container footer-grid">
+    <div class="site-container footer-main">
       <div class="footer-brand">
         <img class="footer-logo" src="../assets/images/logo-2.png" alt="">
         <div>
-          <p class="footer-brand-title">機械智造轉型服務據點<br>訓練資源地圖</p>
+          <p class="footer-brand-title">機械智造轉型服務據點訓練資源地圖</p>
           <p class="footer-brand-subtitle">Intelligent Machinery Regional Industry Training Center For Mapping Resources</p>
         </div>
       </div>
-      <nav class="footer-nav" aria-label="頁尾據點介紹">
-        <h2>據點介紹</h2>
-        <a href="about.html#goals">計畫緣起與目標</a>
-        <a href="about.html#services">服務對象與範圍</a>
+      <nav class="footer-navigation" aria-label="頁面導覽">
+        <details class="footer-nav footer-nav-group">
+          <summary class="footer-nav-summary">據點介紹</summary>
+          <a href="about.html#goals">計畫緣起與目標</a>
+          <a href="about.html#services">服務對象與範圍</a>
+        </details>
+        <details class="footer-nav footer-nav-group">
+          <summary class="footer-nav-summary">據點動態</summary>
+          <a href="update.html?category=news">最新消息</a>
+          <a href="update.html?category=jobs">廠商職缺</a>
+          <a href="update.html?category=gallery">活動花絮</a>
+          <a href="update.html?category=courses">課程招生</a>
+        </details>
+        <details class="footer-nav footer-nav-group">
+          <summary class="footer-nav-summary">趨勢知識</summary>
+          <a href="insights.html">相關專欄文章</a>
+        </details>
+        <details class="footer-nav footer-nav-group">
+          <summary class="footer-nav-summary">訓練資源</summary>
+          <a href="training.html?status=open">熱門課程</a>
+          <a href="training.html">全部課程</a>
+        </details>
       </nav>
-      <nav class="footer-nav" aria-label="頁尾據點動態">
-        <h2>據點動態</h2>
-        <a href="update.html?category=news">最新消息</a>
-        <a href="update.html?category=jobs">廠商職缺</a>
-        <a href="update.html?category=gallery">活動花絮</a>
-        <a href="update.html?category=courses">課程招生</a>
-      </nav>
-      <div class="footer-nav">
-        <h2>訓練資源</h2>
-        <a href="training.html?status=open">熱門課程</a>
-        <a href="training.html">全部課程</a>
-        <div class="footer-social">
-          <a class="fb" href="#" aria-label="Facebook"></a>
-          <a class="ig" href="#" aria-label="Instagram"></a>
-          <a class="line" href="#" aria-label="LINE"></a>
+      <div class="footer-nav footer-side">
+        <h2>網站瀏覽人次</h2>
+        <div class="footer-counter" aria-label="網站瀏覽人次 012345">
+          <span aria-hidden="true">0</span><span aria-hidden="true">1</span><span aria-hidden="true">2</span><span aria-hidden="true">3</span><span aria-hidden="true">4</span><span aria-hidden="true">5</span>
+        </div>
+        <div class="footer-social footer-social-static" aria-label="社群媒體">
+          <span class="fb" role="img" aria-label="Facebook 連結待提供"></span>
+          <span class="ig" role="img" aria-label="Instagram 連結待提供"></span>
+          <span class="line" role="img" aria-label="LINE 連結待提供"></span>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <a href="privacy.html">隱私權政策</a> ｜ Copyright © 2026 產業人才培訓據點計畫 版權所有
-    </div>
+    <div class="footer-bottom"><a href="privacy.html">隱私權政策</a><span>Copyright © 2026 產業人才培訓據點計畫 版權所有</span></div>
   </footer>
 
   <button class="back-to-top" type="button" aria-label="回到頁面頂端">

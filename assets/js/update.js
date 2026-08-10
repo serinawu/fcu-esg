@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const makePageLink = (label, page, options = {}) => {
     const link = document.createElement("a");
-    link.className = "news-page-link";
+    link.className = "site-page-link";
     link.textContent = label;
     link.href = categoryUrl(category, page);
     if (options.current) {

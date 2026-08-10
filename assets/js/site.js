@@ -1,5 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   const currentPage = document.body.dataset.page;
+  const footerNavigationGroups = [...document.querySelectorAll(".footer-nav-group")];
+  const compactFooterQuery = window.matchMedia("(max-width: 1024px)");
+
+  const syncFooterNavigation = () => {
+    footerNavigationGroups.forEach((group) => {
+      group.open = !compactFooterQuery.matches;
+    });
+  };
+
+  footerNavigationGroups.forEach((group) => {
+    group.addEventListener("toggle", () => {
+      if (!compactFooterQuery.matches || !group.open) return;
+      footerNavigationGroups.forEach((otherGroup) => {
+        if (otherGroup !== group) otherGroup.open = false;
+      });
+    });
+  });
+
+  syncFooterNavigation();
+  compactFooterQuery.addEventListener("change", syncFooterNavigation);
 
   if (currentPage) {
     document.querySelectorAll(`[data-nav="${currentPage}"]`).forEach((link) => {
@@ -25,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
       window.bootstrap.Tooltip.getOrCreateInstance(element);
     });
   }
+
+  if (!currentPage) return;
 
   const backToTopButton = document.querySelector(".back-to-top");
   if (!backToTopButton) return;
