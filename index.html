@@ -1226,7 +1226,7 @@
 
     .knowledge-row {
       display: grid;
-      grid-template-columns: 72px 1fr;
+      grid-template-columns: 112px 1fr;
       gap: 12px;
       padding: 12px 0;
       border-bottom: 1px solid #edf2f7;
@@ -1236,13 +1236,10 @@
       border-bottom: 0;
     }
 
-    .thumb-icon {
-      height: 64px;
+    .thumb-cover {
+      margin: 0;
       border-radius: 7px;
-      display: grid;
-      place-items: center;
       background: var(--blue-800);
-      color: #fff;
     }
 
     .knowledge-row h3 {
@@ -1287,7 +1284,7 @@
     .video-main {
       position: relative;
       display: grid;
-      flex: 1 1 auto;
+      width: 100%;
       min-height: 235px;
       padding: 22px;
       overflow: hidden;
@@ -1296,8 +1293,31 @@
         linear-gradient(115deg, transparent 0 58%, rgb(255 255 255 / 10%) 58% 61%, transparent 61%),
         radial-gradient(circle at 20% 25%, rgb(255 255 255 / 14%), transparent 28%),
         linear-gradient(135deg, var(--blue-900), var(--blue-600));
+      border: 0;
       border-radius: 10px;
       color: #fff;
+      font: inherit;
+      text-align: inherit;
+      cursor: pointer;
+      appearance: none;
+    }
+
+    .video-main-cover,
+    .video-mini-cover {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .video-main-cover img,
+    .video-mini-cover img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
     .home-video-panel {
@@ -1334,6 +1354,13 @@
     .video-mini:hover .home-video-play,
     .video-mini:focus .home-video-play {
       transform: scale(1.08);
+    }
+
+    .video-main:hover,
+    .video-main:focus,
+    .video-mini:hover,
+    .video-mini:focus {
+      color: var(--orange);
     }
 
     .home-video-series,
@@ -1376,7 +1403,7 @@
 
     .video-list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 8px;
       margin-top: 12px;
     }
@@ -1384,6 +1411,7 @@
     .video-mini {
       position: relative;
       display: grid;
+      width: 100%;
       min-height: 112px;
       padding: 12px;
       overflow: hidden;
@@ -1391,28 +1419,29 @@
       background:
         radial-gradient(circle at 20% 25%, rgb(255 255 255 / 13%), transparent 30%),
         linear-gradient(135deg, #9a4e00, var(--orange));
+      border: 0;
       border-radius: 7px;
       place-items: center;
+      font: inherit;
+      text-align: inherit;
+      cursor: pointer;
+      appearance: none;
     }
 
     .video-mini:nth-child(2) {
       background: linear-gradient(135deg, #075c62, #18a1a8);
     }
 
-    .video-mini:nth-child(3) {
-      background: linear-gradient(135deg, #43306e, #7758b2);
-    }
-
     .video-mini .home-video-play {
-      width: 38px;
-      height: 38px;
+      width: 30px;
+      height: 30px;
     }
 
     .video-mini .home-video-play::before {
-      margin-left: 3px;
-      border-top-width: 6px;
-      border-bottom-width: 6px;
-      border-left-width: 10px;
+      margin-left: 2px;
+      border-top-width: 5px;
+      border-bottom-width: 5px;
+      border-left-width: 8px;
     }
 
     .video-mini .home-video-title {
@@ -1428,6 +1457,56 @@
       bottom: auto;
       padding: 2px 5px;
       font-size: 9px;
+    }
+
+    .video-modal .modal-content {
+      overflow: hidden;
+      border: 0;
+      border-radius: 14px;
+    }
+
+    .video-modal .modal-header {
+      align-items: start;
+      padding: 18px 20px;
+      border-bottom-color: var(--line);
+    }
+
+    .video-modal .modal-title {
+      padding-right: 20px;
+      color: var(--blue-800);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .video-modal .modal-body {
+      padding: 0;
+    }
+
+    .video-player {
+      aspect-ratio: 16 / 9;
+      background: var(--blue-900);
+    }
+
+    .video-player iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-modal-copy {
+      padding: 18px 20px 20px;
+    }
+
+    .video-modal-meta {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .video-modal-summary {
+      margin: 0 0 14px;
+      color: #475569;
     }
 
     .activity-carousel {
@@ -2565,25 +2644,33 @@
         </div>
         <div class="knowledge-list">
           <a class="knowledge-row hover-bg" href="./pages/insight-detail.html?id=insight-001">
-            <div class="thumb-icon">▶</div>
+            <figure class="thumb-cover site-ratio-16x9 site-cover-blur" style="--bg-url:url('./assets/images/banner-2.jpg')">
+              <img src="./assets/images/banner-2.jpg" alt="" loading="lazy" />
+            </figure>
             <div>
               <h3>智慧製造趨勢與中小企業轉型策略</h3><time>2026.05.06</time>
             </div>
           </a>
           <a class="knowledge-row hover-bg" href="./pages/insight-detail.html?id=insight-002">
-            <div class="thumb-icon">📘</div>
+            <figure class="thumb-cover site-ratio-16x9 site-cover-blur" style="--bg-url:url('./assets/images/banner-2.jpg')">
+              <img src="./assets/images/banner-2.jpg" alt="" loading="lazy" />
+            </figure>
             <div>
               <h3>機械產業碳管理與 ESG 實務應用</h3><time>2026.04.28</time>
             </div>
           </a>
           <a class="knowledge-row hover-bg" href="./pages/insight-detail.html?id=insight-003">
-            <div class="thumb-icon">AI</div>
+            <figure class="thumb-cover site-ratio-16x9 site-cover-blur" style="--bg-url:url('./assets/images/banner-2.jpg')">
+              <img src="./assets/images/banner-2.jpg" alt="" loading="lazy" />
+            </figure>
             <div>
               <h3>生成式 AI 在製造業的應用與挑戰</h3><time>2026.04.20</time>
             </div>
           </a>
           <a class="knowledge-row hover-bg" href="./pages/insight-detail.html?id=insight-004">
-            <div class="thumb-icon">IoT</div>
+            <figure class="thumb-cover site-ratio-16x9 site-cover-blur" style="--bg-url:url('./assets/images/banner-2.jpg')">
+              <img src="./assets/images/banner-2.jpg" alt="" loading="lazy" />
+            </figure>
             <div>
               <h3>工業物聯網如何提升設備維護效率</h3><time>2026.04.12</time>
             </div>
@@ -2601,26 +2688,48 @@
             </svg>
           </a>
         </div>
-        <a class="video-main" href="./pages/videos.html?video=video-001"
-          aria-label="播放精選影片：智慧製造轉型：從現場需求開始">
+        <button type="button" class="video-main" data-home-video
+          data-video-id="qvl7LGweclc"
+          data-video-title="勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】介紹影片"
+          data-video-series="據點講堂"
+          data-video-date="2026-08-10"
+          data-video-duration="02:07"
+          data-video-summary="逢甲大學承辦勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】介紹影片。"
+          data-video-external="https://www.youtube.com/watch?v=qvl7LGweclc"
+          aria-label="播放精選影片：勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】介紹影片">
+          <span class="video-main-cover">
+            <img src="https://img.youtube.com/vi/qvl7LGweclc/hqdefault.jpg" alt="" loading="lazy" />
+          </span>
           <span class="home-video-series">據點講堂</span>
           <span class="home-video-play" aria-hidden="true"></span>
-          <span class="home-video-title">智慧製造轉型：從現場需求開始</span>
-          <span class="home-video-duration">08:42</span>
-        </a>
+          <span class="home-video-title">機械智造轉型服務據點介紹影片</span>
+          <span class="home-video-duration">02:07</span>
+        </button>
         <div class="video-list">
-          <a class="video-mini" href="./pages/videos.html?video=video-002"
-            aria-label="播放影片：AI 視覺檢測在產線上的應用情境"><span class="home-video-play"
-              aria-hidden="true"></span><span class="home-video-title">AI 視覺檢測應用</span><span
-              class="home-video-duration">12:18</span></a>
-          <a class="video-mini" href="./pages/videos.html?video=video-003"
-            aria-label="播放影片：機械產業職能升級與人才培育趨勢"><span class="home-video-play"
-              aria-hidden="true"></span><span class="home-video-title">機械產業人才趨勢</span><span
-              class="home-video-duration">15:06</span></a>
-          <a class="video-mini" href="./pages/videos.html?video=video-007"
-            aria-label="播放影片：機械手臂整合應用成果分享"><span class="home-video-play"
-              aria-hidden="true"></span><span class="home-video-title">機械手臂成果分享</span><span
-              class="home-video-duration">06:48</span></a>
+          <button type="button" class="video-mini" data-home-video
+            data-video-id="lUYULV5bgy4"
+            data-video-title="臺中市政府勞工局創新人才培育暨職能提升輔導計畫114年青年前進重點產業工作坊"
+            data-video-series="活動紀實"
+            data-video-date="2026-08-10"
+            data-video-duration="01:50"
+            data-video-summary="逢甲大學承辦臺中市政府勞工局創新人才培育暨職能提升輔導計畫，記錄青年前進重點產業工作坊活動內容。"
+            data-video-external="https://www.youtube.com/watch?v=lUYULV5bgy4"
+            aria-label="播放影片：臺中市政府勞工局創新人才培育暨職能提升輔導計畫114年青年前進重點產業工作坊"><span class="video-mini-cover"><img
+                src="https://img.youtube.com/vi/lUYULV5bgy4/hqdefault.jpg" alt="" loading="lazy" /></span><span
+              class="home-video-play" aria-hidden="true"></span><span class="home-video-title">青年前進重點產業工作坊</span><span
+              class="home-video-duration">01:50</span></button>
+          <button type="button" class="video-mini" data-home-video
+            data-video-id="w9zqkppWoGU"
+            data-video-title="勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】114年扎根計畫"
+            data-video-series="據點講堂"
+            data-video-date="2026-08-10"
+            data-video-duration="01:25"
+            data-video-summary="勞動部勞動力發展署中彰投分署辦理【機械智造轉型服務據點】114年扎根計畫說明。"
+            data-video-external="https://www.youtube.com/watch?v=w9zqkppWoGU"
+            aria-label="播放影片：勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】114年扎根計畫"><span class="video-mini-cover"><img
+                src="https://img.youtube.com/vi/w9zqkppWoGU/hqdefault.jpg" alt="" loading="lazy" /></span><span
+              class="home-video-play" aria-hidden="true"></span><span class="home-video-title">機械智造轉型服務據點114年扎根計畫</span><span
+              class="home-video-duration">01:25</span></button>
         </div>
       </div>
       <aside class="aside-stack">
@@ -2725,8 +2834,30 @@
     </svg>
   </button>
 
+  <div class="modal fade video-modal" id="videoModal" tabindex="-1" aria-labelledby="videoModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="videoModalTitle">影片標題</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉影片"></button>
+        </div>
+        <div class="modal-body">
+          <div class="video-player" id="videoPlayer"></div>
+          <div class="video-modal-copy">
+            <p class="video-modal-meta" id="videoModalMeta"></p>
+            <p class="video-modal-summary" id="videoModalSummary"></p>
+            <a class="site-button site-button-secondary" id="videoExternalLink" href="#" target="_blank"
+              rel="noopener noreferrer">前往影片平台觀看</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="./assets/js/count-up.js"></script>
   <script src="./assets/js/site.js"></script>
+  <script src="./assets/js/home-video-modal.js"></script>
   <script>
     const slides = document.querySelectorAll('.hero-slide')
     const backToTopButton = document.querySelector('.back-to-top')
