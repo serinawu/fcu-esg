@@ -4,7 +4,7 @@
 
 ## 目前版本
 
-`v1.0.0`：第一批確認開放頁面，供外部展示與內容確認使用。
+`v1.1.0`：開放趨勢知識與完整訓練資源主題，供外部展示與內容確認使用。
 
 ## 已開放頁面
 
@@ -35,18 +35,26 @@
 - 活動花絮：[`pages/gallery-detail.html`](./pages/gallery-detail.html)，使用 `?id=gallery-XXX`
 - 課程招生：[`pages/training-detail.html`](./pages/training-detail.html)，使用 `?id=courses-XXX`
 
-`training-detail.html` 目前僅作為「據點動態／課程招生」的詳細頁使用，不代表完整訓練資源頁面已開放。
+### 趨勢知識
+
+- 文章列表：[`pages/insights.html`](./pages/insights.html)
+- 文章詳細頁：[`pages/insight-detail.html`](./pages/insight-detail.html)，使用 `?id=insight-XXX`
+- 支援分類、關鍵字搜尋、分頁，以及網格／列表顯示模式
+
+### 訓練資源
+
+- 全部課程：[`pages/training.html`](./pages/training.html)
+- 報名中課程：`pages/training.html?status=open`
+- 課程詳細頁：[`pages/training-detail.html`](./pages/training-detail.html)，使用 `?id=courses-XXX`
+- 支援課程狀態、資源類別、類型、區域、日期及關鍵字篩選
 
 ## 尚未開放
 
-- 趨勢知識
-- 完整訓練資源列表
-- 首頁課程推薦連結
 - 影片專區
 - 聯絡我們
 - 隱私權政策
 
-上述頁面及其專用檔案目前未納入本 repository；展示頁中的相關入口已停用。
+上述頁面目前未對外開放，展示頁中的相關入口已停用。
 
 ## 目錄結構
 
@@ -56,6 +64,9 @@
 ├── pages/
 │   ├── about.html
 │   ├── update.html
+│   ├── insights.html
+│   ├── insight-detail.html
+│   ├── training.html
 │   ├── news-detail.html
 │   ├── job-detail.html
 │   ├── gallery-detail.html
@@ -68,6 +79,7 @@
 └── data/
     ├── updates.json
     ├── courses.json
+    ├── insights.json
     └── region-statistics.json
 ```
 
