@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const definitions = statusTool.definitions;
-  const allowedResources = new Set(["site-free", "talent-program"]);
+  const allowedResources = new Set(["site-plan", "site-free", "talent-program"]);
   const allowedModes = new Set(["online", "physical"]);
   const allowedRegions = new Set(["taichung", "changhua", "nantou"]);
   const params = new URLSearchParams(window.location.search);
@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const requestedKeyword = params.get("q");
   const keyword = requestedKeyword?.trim() || "";
   const requestedSearchBy = params.get("searchBy");
-  const searchBy = keyword && requestedSearchBy === "provider" ? "provider" : "title";
+  const allowedSearchFields = new Set(["title", "provider", "tag"]);
+  const searchBy = keyword && allowedSearchFields.has(requestedSearchBy) ? requestedSearchBy : "title";
   const isIsoDate = (value) => {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "")) return false;
     const parsed = new Date(`${value}T00:00:00Z`);
@@ -76,7 +77,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   }, {});
   const matchesKeyword = (course) => {
     if (terms.length === 0) return true;
-    const values = searchBy === "provider" ? [course.provider] : [course.title];
+    const values = searchBy === "provider"
+      ? [course.provider]
+      : searchBy === "tag"
+        ? course.tags || []
+        : [course.title];
     const haystack = normalize(values.filter(Boolean).join(" "));
     return terms.every((term) => haystack.includes(term));
   };
@@ -108,7 +113,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (state.resource) query.set("resource", state.resource);
     if (state.mode) query.set("mode", state.mode);
     if (state.region) query.set("region", state.region);
-    if (state.keyword && state.searchBy === "provider") query.set("searchBy", state.searchBy);
+    if (state.keyword && state.searchBy !== "title") query.set("searchBy", state.searchBy);
     if (state.keyword) query.set("q", state.keyword);
     if (state.dateStart) query.set("start", state.dateStart);
     if (state.dateEnd) query.set("end", state.dateEnd);
@@ -196,7 +201,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     filterBody.classList.add("is-open");
   }
 
-  const statusLabel = status === "all" ? "全部訓練資源" : definitions[status].label;
+  const statusLabel = status === "all" ? "訓練資源" : definitions[status].label;
   title.textContent = statusLabel;
   description.textContent = activeFilterCount
     ? `已依 ${activeFilterCount} 項條件篩選，課程狀態仍會隨日期自動更新。`
@@ -223,6 +228,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     return link;
   };
 
+  const createFilterTag = (label, href, ariaLabel) => {
+    const link = document.createElement("a");
+    link.className = "badge badge-secondary training-tag training-tag-link";
+    link.href = href;
+    link.textContent = label;
+    link.setAttribute("aria-label", ariaLabel);
+    return link;
+  };
+
   visible.forEach((course) => {
     const item = document.createElement("li");
     const card = document.createElement("article");
@@ -234,7 +248,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     image.src = course.cover.src;
     image.alt = course.cover.alt;
     image.loading = "lazy";
-    cover.append(image);
+    const category = document.createElement("span");
+    category.className = "training-resource-label";
+    category.textContent = course.resourceCategoryLabel;
+    cover.append(image, category);
 
     const content = document.createElement("div");
     content.className = "training-card-content";
@@ -244,13 +261,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const statusValue = courseStatus.get(course.id);
     statusBadge.className = `training-status-badge training-status-${statusValue}`;
     statusBadge.textContent = definitions[statusValue].label;
-    const category = document.createElement("span");
-    category.textContent = course.resourceCategoryLabel;
-    const provider = document.createElement("span");
-    provider.textContent = course.provider;
-    const modeLabel = document.createElement("span");
-    modeLabel.textContent = course.deliveryMode;
-    meta.append(statusBadge, category, provider, modeLabel);
+    meta.append(statusBadge);
 
     const heading = document.createElement("h2");
     heading.className = "training-card-title";
@@ -264,17 +275,41 @@ document.addEventListener("DOMContentLoaded", async () => {
     const tags = document.createElement("div");
     tags.className = "training-card-tags";
     (course.tags || []).forEach((value) => {
-      const tag = document.createElement("span");
-      tag.textContent = value;
-      tags.append(tag);
+      if (value === course.provider) {
+        tags.append(createFilterTag(
+          value,
+          buildUrl(status, 1, { keyword: value, searchBy: "provider" }),
+          `依訓練單位篩選：${value}`
+        ));
+        return;
+      }
+      if (["實體課程", "線上課程", "遠距課程"].includes(value)) {
+        tags.append(createFilterTag(
+          value,
+          buildUrl(status, 1, { mode: course.deliveryModeCode }),
+          `依授課方式篩選：${value}`
+        ));
+        return;
+      }
+      tags.append(createFilterTag(
+        value,
+        buildUrl(status, 1, { keyword: value, searchBy: "tag" }),
+        `依標籤篩選：${value}`
+      ));
     });
+    tags.append(createFilterTag(
+      course.region,
+      buildUrl(status, 1, { region: course.regionCode }),
+      `依課程區域篩選：${course.region}`
+    ));
+    const dates = document.createElement("span");
+    dates.className = "badge badge-secondary training-tag";
+    dates.textContent = statusTool.formatDateRange(course.courseStart, course.courseEnd);
+    tags.append(dates);
     const footer = document.createElement("div");
     footer.className = "training-card-footer";
-    const dates = document.createElement("span");
-    dates.className = "training-card-dates";
-    dates.textContent = `${course.region}｜上課：${statusTool.formatDateRange(course.courseStart, course.courseEnd)}`;
-    footer.append(dates, createMoreLink(course.detailUrl));
-    content.append(meta, heading, summary, tags, footer);
+    footer.append(tags, createMoreLink(course.detailUrl));
+    content.append(meta, heading, summary, footer);
     card.append(cover, content);
     item.append(card);
     list.append(item);
