@@ -284,14 +284,6 @@
   border-radius: 12px;
 }
 
-/* 不強制 16:9：寬度撐滿，高度依原圖比例呈現，僅在極端比例（超過 500px）時才裁到上限，
-   讓 .site-cover-blur 的模糊底圖去填補左右留白，避免正常比例的圖片被硬撐出多餘空白 */
-.insight-detail-cover-wrap img {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-}
-
 .insight-detail-body {
   width: 100%;
 }

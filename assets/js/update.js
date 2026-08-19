@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       .map((course) => ({
         id: course.id,
         type: "courses",
-        date: course.publishedAt,
+        publishedAt: course.publishedAt,
         title: course.title,
         summary: course.summary,
         cover: course.cover,
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ))
     .filter((item) => category === "all" || item.type === category)
     .filter(matchesKeyword)
-    .sort((a, b) => b.date.localeCompare(a.date));
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   const totalPages = Math.max(1, Math.ceil(categoryItems.length / pageSize));
   const requestedPage = params.get("page");
   const parsedPage = Number.parseInt(requestedPage || "1", 10);
@@ -248,8 +248,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     badge.textContent = labels[item.type];
     const date = document.createElement("time");
     date.className = "news-date";
-    date.dateTime = item.date;
-    date.textContent = item.date.replaceAll("-", ".");
+    date.dateTime = item.publishedAt;
+    date.textContent = item.publishedAt.replaceAll("-", ".");
     meta.append(badge, date);
 
     const content = document.createElement("div");

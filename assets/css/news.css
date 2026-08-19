@@ -488,7 +488,7 @@
 }
 
 .news-article {
-  padding: clamp(24px, 5vw, 54px);
+  padding: clamp(24px, 4vw, 46px);
 }
 
 .article-header {
@@ -498,12 +498,26 @@
 
 .article-meta {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 10px 16px;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 14px;
   color: var(--muted);
   font-size: 14px;
+}
+
+.article-meta-tags,
+.article-meta-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+}
+
+.article-meta-dates {
+  margin-left: auto;
 }
 
 .article-title {
@@ -530,8 +544,7 @@
 }
 
 .article-body {
-  max-width: 900px;
-  margin-inline: auto;
+  width: 100%;
   color: #334155;
   font-size: 17px;
 }

@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (item && expectedType === "courses") {
       item = {
         ...item,
-        date: item.publishedAt,
         detail: {
           ...item.detail,
           courseDates: window.FCUCourseStatus.formatDateRange(item.courseStart, item.courseEnd),
@@ -87,9 +86,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.title = `${item.title}｜${expectedType === "courses" ? "訓練資源" : "據點動態"}`;
   setText("[data-detail-title]", item.title);
   setText("[data-detail-lead]", item.detail.lead || item.summary);
-  setText("[data-detail-date]", item.date.replaceAll("-", "."));
+  setText("[data-detail-published-date]", item.publishedAt.replaceAll("-", "."));
   document.querySelectorAll("[data-detail-datetime]").forEach((element) => {
-    element.dateTime = item.date;
+    element.dateTime = item.publishedAt;
   });
 
   if (expectedType === "jobs") {
@@ -143,6 +142,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   if (expectedType === "gallery") {
+    setText("[data-detail-event-date]", item.detail.eventDate.replaceAll("-", "."));
     setText('[data-detail-field="location"]', item.detail.location);
     setText('[data-detail-field="eventType"]', item.detail.eventType);
     setText('[data-detail-field="photoCount"]', item.detail.photoCount);
@@ -166,7 +166,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (expectedType === "news") {
     setText("[data-detail-category]", item.detail.category);
-    setText("[data-detail-updated]", item.updatedAt?.replaceAll("-", "."));
     const pinned = document.querySelector("[data-detail-pinned]");
     if (pinned) pinned.hidden = !item.pinned;
     const image = document.querySelector("[data-detail-image]");
