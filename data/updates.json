@@ -7,14 +7,14 @@
       "updatedAt": "2026-07-23",
       "title": "115–117 產業人才培訓據點計畫正式啟動",
       "summary": "整合中彰投機械與智慧自動化產業的訓練、職缺及轉型資源，提供企業與民眾一站式資訊入口。",
-      "cover": {"src": "../assets/images/banner-2.jpg", "alt": "產業人才培訓據點計畫視覺"},
+      "cover": {"src": "../assets/images/banner-2.png", "alt": "產業人才培訓據點計畫視覺"},
       "pinned": true,
       "extra": ["計畫公告"],
       "tags": ["計畫公告"],
       "detailUrl": "news-detail.html?id=news-001",
       "detail": {
         "category": "一般公告",
-        "image": "../assets/images/banner-2.jpg",
+        "image": "../assets/images/banner-2.png",
         "imageAlt": "115–117 產業人才培訓據點計畫機械智造轉型服務據點示意",
         "lead": "整合中彰投機械與智慧自動化產業的訓練、職缺及轉型資源，提供企業與民眾一站式資訊入口。",
         "sections": [
@@ -60,13 +60,13 @@
       "updatedAt": "2026-07-18",
       "title": "機械智造轉型服務據點網站規劃作業展開",
       "summary": "網站將陸續建置據點資訊、訓練資源、產業職缺、趨勢知識與影音內容。",
-      "cover": {"src": "../assets/images/banner-2.jpg", "alt": "機械智造轉型服務據點網站規劃視覺"},
+      "cover": {"src": "../assets/images/banner-2.png", "alt": "機械智造轉型服務據點網站規劃視覺"},
       "extra": ["一般公告"],
       "tags": ["一般公告"],
       "detailUrl": "news-detail.html?id=news-002",
       "detail": {
         "category": "一般公告",
-        "image": "../assets/images/banner-2.jpg",
+        "image": "../assets/images/banner-2.png",
         "imageAlt": "機械智造轉型服務據點網站規劃示意",
         "sections": [
           {"heading": "規劃方向", "paragraphs": ["本階段優先建立可完整瀏覽的靜態展示版，首頁將串接所有主要內容頁，並以假資料驗證列表、詳細頁及分類切換。"]},
@@ -91,18 +91,18 @@
         "photoCount": "8 張（展示 6 張）",
         "description": "活動由講師介紹智慧製造設備與安全操作方式，學員分組完成感測器設定、設備聯網及資料觀察，並交流不同產業場域的導入需求。",
         "photos": [
-          {"src": "../assets/images/banner-2.jpg", "alt": "講師介紹智慧製造設備", "caption": "講師說明設備架構與安全操作。"},
-          {"src": "../assets/images/banner-2.jpg", "alt": "學員進行設備操作練習", "caption": "學員分組進行設備操作練習。"},
-          {"src": "../assets/images/banner-2.jpg", "alt": "學員設定感測器", "caption": "感測器設定與資料觀察。"},
-          {"src": "../assets/images/banner-2.jpg", "alt": "講師示範設備聯網", "caption": "講師示範設備聯網流程。"},
-          {"src": "../assets/images/banner-2.jpg", "alt": "學員分享實作成果", "caption": "各組分享實作成果與問題。"},
-          {"src": "../assets/images/banner-2.jpg", "alt": "活動參與者合影", "caption": "活動參與者成果合影。"}
+          {"src": "../assets/images/banner-2.png", "alt": "講師介紹智慧製造設備", "caption": "講師說明設備架構與安全操作。"},
+          {"src": "../assets/images/banner-2.png", "alt": "學員進行設備操作練習", "caption": "學員分組進行設備操作練習。"},
+          {"src": "../assets/images/banner-2.png", "alt": "學員設定感測器", "caption": "感測器設定與資料觀察。"},
+          {"src": "../assets/images/banner-2.png", "alt": "講師示範設備聯網", "caption": "講師示範設備聯網流程。"},
+          {"src": "../assets/images/banner-2.png", "alt": "學員分享實作成果", "caption": "各組分享實作成果與問題。"},
+          {"src": "../assets/images/banner-2.png", "alt": "活動參與者合影", "caption": "活動參與者成果合影。"}
         ]
       }
     },
     {
-      "id": "news-003", "type": "news", "publishedAt": "2026-07-10", "updatedAt": "2026-07-11", "title": "智慧製造與 AI 應用人才交流會開放報名", "summary": "邀請產業專家分享智慧製造導入經驗，並安排人才培訓與企業媒合交流。", "cover": {"src": "../assets/images/banner-2.jpg", "alt": "智慧製造與 AI 應用人才交流會視覺"}, "extra": ["活動訊息"], "tags": ["活動訊息"], "detailUrl": "news-detail.html?id=news-003",
-      "detail": {"category": "活動訊息", "image": "../assets/images/banner-2.jpg", "imageAlt": "智慧製造與 AI 應用人才交流會示意", "sections": [{"heading": "活動內容", "paragraphs": ["交流會將分享 AI 視覺檢測、設備聯網及製造數據應用案例，並安排企業與培訓單位交流人才需求。"]}, {"heading": "參加對象", "paragraphs": ["歡迎製造業管理者、工程人員、求職者及對智慧製造應用有興趣的民眾報名參加。"]}]}
+      "id": "news-003", "type": "news", "publishedAt": "2026-07-10", "updatedAt": "2026-07-11", "title": "智慧製造與 AI 應用人才交流會開放報名", "summary": "邀請產業專家分享智慧製造導入經驗，並安排人才培訓與企業媒合交流。", "cover": {"src": "../assets/images/banner-2.png", "alt": "智慧製造與 AI 應用人才交流會視覺"}, "extra": ["活動訊息"], "tags": ["活動訊息"], "detailUrl": "news-detail.html?id=news-003",
+      "detail": {"category": "活動訊息", "image": "../assets/images/banner-2.png", "imageAlt": "智慧製造與 AI 應用人才交流會示意", "sections": [{"heading": "活動內容", "paragraphs": ["交流會將分享 AI 視覺檢測、設備聯網及製造數據應用案例，並安排企業與培訓單位交流人才需求。"]}, {"heading": "參加對象", "paragraphs": ["歡迎製造業管理者、工程人員、求職者及對智慧製造應用有興趣的民眾報名參加。"]}]}
     },
     {
       "id": "jobs-002", "type": "jobs", "regionCode": "changhua", "publishedAt": "2026-07-08", "title": "CNC 銑床技術人員職缺", "summary": "負責 CNC 銑床操作、程式調整及加工品質確認，具相關經驗者優先。", "cover": {"src": null, "alt": ""}, "extra": ["△△機械有限公司", "彰化縣", "截止 2026.08.10"], "tags": ["△△機械有限公司", "彰化縣"], "detailUrl": "job-detail.html?id=jobs-002",
@@ -112,17 +112,17 @@
     {
       "id": "gallery-002", "type": "gallery", "publishedAt": "2026-07-06", "title": "機械手臂基礎整合應用班成果紀錄", "summary": "課程以分組操作完成取放、感測與安全控制練習，呈現跨域整合成果。", "cover": {"src": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&auto=format&fit=crop", "alt": "機械手臂課程成果示意"}, "extra": ["彰化場", "活動照片 10 張"], "tags": ["彰化場"], "detailUrl": "gallery-detail.html?id=gallery-002",
       "detail": {"eventDate": "2026-07-06", "location": "彰化產業人才培訓據點", "eventType": "課程成果", "photoCount": "10 張（展示 6 張）", "description": "學員分組完成機械手臂座標設定、取放路徑及安全控制練習，並於成果交流中說明整合方式。", "photos": [
-        {"src": "../assets/images/banner-2.jpg", "alt": "講師示範機械手臂操作", "caption": "講師示範座標與路徑設定。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "學員進行手臂取放練習", "caption": "學員進行工件取放練習。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "感測器整合操作", "caption": "感測器與安全控制整合。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "小組討論程式設定", "caption": "小組討論程式與參數設定。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "成果測試過程", "caption": "完成整合後進行成果測試。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "課程成果合影", "caption": "課程結業成果合影。"}
+        {"src": "../assets/images/banner-2.png", "alt": "講師示範機械手臂操作", "caption": "講師示範座標與路徑設定。"},
+        {"src": "../assets/images/banner-2.png", "alt": "學員進行手臂取放練習", "caption": "學員進行工件取放練習。"},
+        {"src": "../assets/images/banner-2.png", "alt": "感測器整合操作", "caption": "感測器與安全控制整合。"},
+        {"src": "../assets/images/banner-2.png", "alt": "小組討論程式設定", "caption": "小組討論程式與參數設定。"},
+        {"src": "../assets/images/banner-2.png", "alt": "成果測試過程", "caption": "完成整合後進行成果測試。"},
+        {"src": "../assets/images/banner-2.png", "alt": "課程成果合影", "caption": "課程結業成果合影。"}
       ]}
     },
     {
-      "id": "news-004", "type": "news", "publishedAt": "2026-07-03", "updatedAt": "2026-07-04", "title": "CNC 銑床實務操作班第二梯次開始招生", "summary": "課程結合理論與設備操作，適合希望投入精密加工領域的在職者與待業者。", "cover": {"src": "../assets/images/banner-2.jpg", "alt": "CNC 銑床實務操作班課程資訊視覺"}, "extra": ["課程資訊"], "tags": ["課程資訊"], "detailUrl": "news-detail.html?id=news-004",
-      "detail": {"category": "課程資訊", "image": "../assets/images/banner-2.jpg", "imageAlt": "CNC 銑床實務操作班示意", "sections": [{"heading": "課程特色", "paragraphs": ["課程從圖面識讀、刀具認識與加工參數開始，搭配實機操作建立完整的 CNC 銑床加工流程概念。"]}, {"heading": "招生對象", "paragraphs": ["適合希望投入精密加工領域的待業者、轉職者及需要強化實作能力的在職人員。"]}]}
+      "id": "news-004", "type": "news", "publishedAt": "2026-07-03", "updatedAt": "2026-07-04", "title": "CNC 銑床實務操作班第二梯次開始招生", "summary": "課程結合理論與設備操作，適合希望投入精密加工領域的在職者與待業者。", "cover": {"src": "../assets/images/banner-2.png", "alt": "CNC 銑床實務操作班課程資訊視覺"}, "extra": ["課程資訊"], "tags": ["課程資訊"], "detailUrl": "news-detail.html?id=news-004",
+      "detail": {"category": "課程資訊", "image": "../assets/images/banner-2.png", "imageAlt": "CNC 銑床實務操作班示意", "sections": [{"heading": "課程特色", "paragraphs": ["課程從圖面識讀、刀具認識與加工參數開始，搭配實機操作建立完整的 CNC 銑床加工流程概念。"]}, {"heading": "招生對象", "paragraphs": ["適合希望投入精密加工領域的待業者、轉職者及需要強化實作能力的在職人員。"]}]}
     },
     {
       "id": "jobs-003", "type": "jobs", "regionCode": "nantou", "publishedAt": "2026-07-01", "title": "自動化控制助理工程師招募", "summary": "協助 PLC 程式測試、控制盤配線及現場設備試車，提供完整新人訓練。", "cover": {"src": null, "alt": ""}, "extra": ["□□自動化科技", "南投縣", "截止 2026.07.31"], "tags": ["□□自動化科技", "南投縣"], "detailUrl": "job-detail.html?id=jobs-003",
@@ -132,17 +132,17 @@
     {
       "id": "gallery-003", "type": "gallery", "publishedAt": "2026-06-28", "title": "中部機械產業人才交流會活動花絮", "summary": "企業代表、訓練單位與求職者交流職能需求及職涯發展方向。", "cover": {"src": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&auto=format&fit=crop", "alt": "中部機械產業人才交流會示意"}, "extra": ["南投場"], "tags": ["南投場"], "detailUrl": "gallery-detail.html?id=gallery-003",
       "detail": {"eventDate": "2026-06-28", "location": "南投產業人才培訓據點", "eventType": "產業交流", "photoCount": "6 張", "description": "企業代表分享人才需求與職涯發展方向，訓練單位並介紹近期課程及技能培訓資源。", "photos": [
-        {"src": "../assets/images/banner-2.jpg", "alt": "人才交流會開場", "caption": "據點代表介紹活動與服務資源。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "企業代表分享人才需求", "caption": "企業代表分享產業人才需求。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "訓練單位介紹課程", "caption": "訓練單位說明近期培訓課程。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "參與者進行交流", "caption": "參與者交流職涯與技能問題。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "現場媒合諮詢", "caption": "現場提供職缺與培訓諮詢。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "交流會合影", "caption": "活動參與者合影。"}
+        {"src": "../assets/images/banner-2.png", "alt": "人才交流會開場", "caption": "據點代表介紹活動與服務資源。"},
+        {"src": "../assets/images/banner-2.png", "alt": "企業代表分享人才需求", "caption": "企業代表分享產業人才需求。"},
+        {"src": "../assets/images/banner-2.png", "alt": "訓練單位介紹課程", "caption": "訓練單位說明近期培訓課程。"},
+        {"src": "../assets/images/banner-2.png", "alt": "參與者進行交流", "caption": "參與者交流職涯與技能問題。"},
+        {"src": "../assets/images/banner-2.png", "alt": "現場媒合諮詢", "caption": "現場提供職缺與培訓諮詢。"},
+        {"src": "../assets/images/banner-2.png", "alt": "交流會合影", "caption": "活動參與者合影。"}
       ]}
     },
     {
-      "id": "news-005", "type": "news", "publishedAt": "2026-06-25", "updatedAt": "2026-06-26", "title": "中彰投機械產業人才需求調查摘要發布", "summary": "調查彙整自動化整合、機電控制、精密加工與數位製造等重點職能需求。", "cover": {"src": "../assets/images/banner-2.jpg", "alt": "中彰投機械產業人才需求調查視覺"}, "extra": ["產業動態"], "tags": ["產業動態"], "detailUrl": "news-detail.html?id=news-005",
-      "detail": {"category": "產業動態", "image": "../assets/images/banner-2.jpg", "imageAlt": "中彰投機械產業人才需求調查示意", "sections": [{"heading": "調查摘要", "paragraphs": ["企業需求集中於自動化整合、機電控制、精密加工、設備維護及製造數據應用等職能。"]}, {"heading": "後續應用", "paragraphs": ["據點將依調查結果規劃培訓主題，並持續彙整企業職缺與人才媒合需求。"]}]}
+      "id": "news-005", "type": "news", "publishedAt": "2026-06-25", "updatedAt": "2026-06-26", "title": "中彰投機械產業人才需求調查摘要發布", "summary": "調查彙整自動化整合、機電控制、精密加工與數位製造等重點職能需求。", "cover": {"src": "../assets/images/banner-2.png", "alt": "中彰投機械產業人才需求調查視覺"}, "extra": ["產業動態"], "tags": ["產業動態"], "detailUrl": "news-detail.html?id=news-005",
+      "detail": {"category": "產業動態", "image": "../assets/images/banner-2.png", "imageAlt": "中彰投機械產業人才需求調查示意", "sections": [{"heading": "調查摘要", "paragraphs": ["企業需求集中於自動化整合、機電控制、精密加工、設備維護及製造數據應用等職能。"]}, {"heading": "後續應用", "paragraphs": ["據點將依調查結果規劃培訓主題，並持續彙整企業職缺與人才媒合需求。"]}]}
     },
     {
       "id": "jobs-004", "type": "jobs", "regionCode": "taichung", "publishedAt": "2026-06-22", "title": "機械設計工程師人才招募", "summary": "負責機構設計、圖面繪製與跨部門技術溝通，熟悉 3D CAD 軟體者佳。", "cover": {"src": null, "alt": ""}, "extra": ["◇◇智造股份有限公司", "臺中市", "截止 2026.07.25"], "tags": ["◇◇智造股份有限公司", "臺中市"], "detailUrl": "job-detail.html?id=jobs-004",
@@ -152,12 +152,12 @@
     {
       "id": "gallery-004", "type": "gallery", "publishedAt": "2026-06-18", "title": "CNC 銑床實務班學習成果", "summary": "記錄學員從刀具設定、程式校正到完成加工件的實作過程。", "cover": {"src": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&auto=format&fit=crop", "alt": "CNC 銑床實務班成果示意"}, "extra": ["彰化場"], "tags": ["彰化場"], "detailUrl": "gallery-detail.html?id=gallery-004",
       "detail": {"eventDate": "2026-06-18", "location": "臺中產業人才培訓據點", "eventType": "學習成果", "photoCount": "9 張（展示 6 張）", "description": "學員依圖面完成刀具設定、程式校正、試切與尺寸量測，逐步建立 CNC 銑床加工實務能力。", "photos": [
-        {"src": "../assets/images/banner-2.jpg", "alt": "CNC 課程安全說明", "caption": "操作前安全規範與設備檢查。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "刀具設定練習", "caption": "學員進行刀具與工件座標設定。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "加工程式校正", "caption": "加工程式模擬與校正。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "CNC 試切過程", "caption": "確認參數後進行工件試切。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "加工件尺寸量測", "caption": "使用量測工具確認加工尺寸。"},
-        {"src": "../assets/images/banner-2.jpg", "alt": "CNC 課程成果展示", "caption": "學員完成的加工件成果。"}
+        {"src": "../assets/images/banner-2.png", "alt": "CNC 課程安全說明", "caption": "操作前安全規範與設備檢查。"},
+        {"src": "../assets/images/banner-2.png", "alt": "刀具設定練習", "caption": "學員進行刀具與工件座標設定。"},
+        {"src": "../assets/images/banner-2.png", "alt": "加工程式校正", "caption": "加工程式模擬與校正。"},
+        {"src": "../assets/images/banner-2.png", "alt": "CNC 試切過程", "caption": "確認參數後進行工件試切。"},
+        {"src": "../assets/images/banner-2.png", "alt": "加工件尺寸量測", "caption": "使用量測工具確認加工尺寸。"},
+        {"src": "../assets/images/banner-2.png", "alt": "CNC 課程成果展示", "caption": "學員完成的加工件成果。"}
       ]}
     }
   ]
