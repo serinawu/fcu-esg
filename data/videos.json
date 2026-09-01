@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "video-003",
+      "title": "勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】介紹影片",
+      "series": "據點講堂",
+      "summary": "逢甲大學承辦勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】介紹影片。",
+      "publishedAt": "2026-08-10",
+      "duration": "02:07",
+      "tags": ["據點介紹", "機械智造轉型"],
+      "platform": "youtube",
+      "videoId": "qvl7LGweclc",
+      "externalUrl": "https://www.youtube.com/watch?v=qvl7LGweclc",
+      "featured": true,
+      "accent": "teal"
+    },
+    {
+      "id": "video-001",
+      "title": "臺中市政府勞工局創新人才培育暨職能提升輔導計畫114年青年前進重點產業工作坊",
+      "series": "活動紀實",
+      "summary": "逢甲大學承辦臺中市政府勞工局創新人才培育暨職能提升輔導計畫，記錄青年前進重點產業工作坊活動內容。",
+      "publishedAt": "2026-08-10",
+      "duration": "01:50",
+      "tags": ["人才培育", "職能提升"],
+      "platform": "youtube",
+      "videoId": "lUYULV5bgy4",
+      "externalUrl": "https://www.youtube.com/watch?v=lUYULV5bgy4",
+      "featured": true,
+      "accent": "blue"
+    },
+    {
+      "id": "video-002",
+      "title": "勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】114年扎根計畫",
+      "series": "據點講堂",
+      "summary": "勞動部勞動力發展署中彰投分署辦理【機械智造轉型服務據點】114年扎根計畫說明。",
+      "publishedAt": "2026-08-10",
+      "duration": "01:25",
+      "tags": ["機械智造轉型服務據點", "扎根計畫"],
+      "platform": "youtube",
+      "videoId": "w9zqkppWoGU",
+      "externalUrl": "https://www.youtube.com/watch?v=w9zqkppWoGU",
+      "featured": true,
+      "accent": "orange"
+    }
+  ]
+}

@@ -4,12 +4,13 @@
 
 ## 目前版本
 
-`v2.0.0`：開放趨勢知識與完整訓練資源主題，並統一列表、詳細頁與響應式介面，供外部展示與內容確認使用。
+`v2.1.0`：開放影片專區、聯絡我們與隱私權政策，完成全站展示頁面，供外部展示與內容確認使用。
 
 ### 本版重點
 
 - 新增趨勢知識列表與文章詳細頁
 - 新增完整訓練資源列表、篩選功能與課程詳細頁
+- 開放影片專區、聯絡我們與隱私權政策
 - 統一各類詳細頁的標籤、發布日期與內容版面
 - 優化列表卡片、封面圖片及手機版操作體驗
 
@@ -55,13 +56,16 @@
 - 課程詳細頁：[`pages/training-detail.html`](./pages/training-detail.html)，使用 `?id=courses-XXX`
 - 支援課程狀態、資源類別、類型、區域、日期及關鍵字篩選
 
-## 尚未開放
+### 影片專區
 
-- 影片專區
-- 聯絡我們
-- 隱私權政策
+- 影片列表：[`pages/videos.html`](./pages/videos.html)
+- 支援系列、關鍵字搜尋、分頁及影片彈窗播放
 
-上述頁面目前未對外開放，展示頁中的相關入口已停用。
+### 聯絡與隱私權
+
+- 聯絡我們：[`pages/contact.html`](./pages/contact.html)
+- 隱私權政策：[`pages/privacy.html`](./pages/privacy.html)
+- 提供正式聯絡資訊、Google 地圖及展示用線上留言表單
 
 ## 目錄結構
 
@@ -74,6 +78,9 @@
 │   ├── insights.html
 │   ├── insight-detail.html
 │   ├── training.html
+│   ├── videos.html
+│   ├── contact.html
+│   ├── privacy.html
 │   ├── news-detail.html
 │   ├── job-detail.html
 │   ├── gallery-detail.html
@@ -87,6 +94,7 @@
     ├── updates.json
     ├── courses.json
     ├── insights.json
+    ├── videos.json
     └── region-statistics.json
 ```
 
