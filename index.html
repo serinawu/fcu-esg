@@ -123,7 +123,9 @@
 
     .hero {
       position: relative;
-      height: 535px;
+      height: auto;
+      min-height: 0;
+      aspect-ratio: 2089 / 753;
       overflow: hidden;
       background: var(--blue-800);
       color: #fff;
@@ -503,9 +505,49 @@
     .search-box {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 14px;
       box-shadow: var(--shadow);
-      padding: 20px;
+      padding: 28px 30px;
+    }
+
+    .search-box .row {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0;
+    }
+
+    .search-label.position-absolute {
+      position: absolute !important;
+      z-index: 1;
+      top: 6px !important;
+      left: 5px !important;
+    }
+
+    .search-box .col-6 {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
+    .search-box .col-2 {
+      grid-column: span 4;
+      width: 100%;
+    }
+
+    .search-box .col-4 {
+      grid-column: span 8;
+      width: 100%;
+    }
+
+    .search-box .col-12 {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
+    .search-box input.form-control {
+      min-height: 52px;
+      padding-left: 205px;
+      text-align: left !important;
     }
 
     .search-grid {
@@ -1284,7 +1326,6 @@
     .video-main {
       position: relative;
       display: grid;
-      width: 100%;
       min-height: 235px;
       padding: 22px;
       overflow: hidden;
@@ -1293,13 +1334,8 @@
         linear-gradient(115deg, transparent 0 58%, rgb(255 255 255 / 10%) 58% 61%, transparent 61%),
         radial-gradient(circle at 20% 25%, rgb(255 255 255 / 14%), transparent 28%),
         linear-gradient(135deg, var(--blue-900), var(--blue-600));
-      border: 0;
       border-radius: 10px;
       color: #fff;
-      font: inherit;
-      text-align: inherit;
-      cursor: pointer;
-      appearance: none;
     }
 
     .video-main-cover,
@@ -1421,7 +1457,6 @@
     .video-mini {
       position: relative;
       display: grid;
-      width: 100%;
       min-height: 112px;
       padding: 12px;
       overflow: hidden;
@@ -1429,13 +1464,8 @@
       background:
         radial-gradient(circle at 20% 25%, rgb(255 255 255 / 13%), transparent 30%),
         linear-gradient(135deg, #9a4e00, var(--orange));
-      border: 0;
       border-radius: 7px;
       place-items: center;
-      font: inherit;
-      text-align: inherit;
-      cursor: pointer;
-      appearance: none;
     }
 
     .video-mini:nth-child(2) {
@@ -1467,56 +1497,6 @@
       bottom: auto;
       padding: 2px 5px;
       font-size: 9px;
-    }
-
-    .video-modal .modal-content {
-      overflow: hidden;
-      border: 0;
-      border-radius: 14px;
-    }
-
-    .video-modal .modal-header {
-      align-items: start;
-      padding: 18px 20px;
-      border-bottom-color: var(--line);
-    }
-
-    .video-modal .modal-title {
-      padding-right: 20px;
-      color: var(--blue-800);
-      font-size: 21px;
-      font-weight: 900;
-    }
-
-    .video-modal .modal-body {
-      padding: 0;
-    }
-
-    .video-player {
-      aspect-ratio: 16 / 9;
-      background: var(--blue-900);
-    }
-
-    .video-player iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .video-modal-copy {
-      padding: 18px 20px 20px;
-    }
-
-    .video-modal-meta {
-      margin: 0 0 8px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .video-modal-summary {
-      margin: 0 0 14px;
-      color: #475569;
     }
 
     .activity-carousel {
@@ -1765,6 +1745,28 @@
       text-decoration-color: currentColor;
     }
 
+    .contact-box .contact-unit {
+      display: grid;
+      gap: 2px;
+      margin: -4px 0 16px;
+      padding: 10px 12px;
+      background: rgb(255 255 255 / 16%);
+      border-left: 3px solid #fff;
+      border-radius: 4px;
+    }
+
+    .contact-unit-label {
+      font-size: 12px;
+      font-weight: 700;
+      opacity: .82;
+    }
+
+    .contact-unit-name {
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
     .contact-card-link {
       position: absolute;
       z-index: 1;
@@ -1882,8 +1884,35 @@
     }
 
     @media (max-width: 767px) {
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+        overflow-x: clip;
+      }
+
+      main.container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+        overflow-x: clip;
+      }
+
+      .search-panel,
+      .search-box,
+      #homeTrainingSearch,
+      .course-section,
+      .course-section .panel {
+        max-width: 100%;
+        min-width: 0;
+      }
+
       .course-grid {
         display: flex;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
         gap: 16px;
         overflow-x: auto;
         padding: 2px 2px 14px;
@@ -1900,9 +1929,7 @@
       }
 
       .hero {
-        height: auto;
-        min-height: 0;
-        aspect-ratio: 2048 / 575;
+        aspect-ratio: 2089 / 753;
       }
 
       .hero::before,
@@ -1948,6 +1975,7 @@
 
       .search-box .row {
         display: grid;
+        grid-template-columns: 1fr;
         gap: 10px;
         margin: 0;
       }
@@ -1956,6 +1984,7 @@
       .search-box .col-4,
       .search-box .col-2,
       .search-box .col-12 {
+        grid-column: 1 / -1;
         width: 100%;
         max-width: 100%;
         flex: none;
@@ -1965,6 +1994,7 @@
 
       .search-label.position-absolute {
         position: static !important;
+        grid-column: 1 / -1;
         margin-bottom: 6px;
       }
 
@@ -1990,6 +2020,7 @@
       }
 
       .search-box input.form-control {
+        padding-left: 14px;
         text-align: left !important;
       }
 
@@ -2019,19 +2050,49 @@
       }
 
       .hot-keywords {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         margin-top: 6px;
-        line-height: 1.9;
         font-size: 11px;
         padding-top: 2px;
+        max-width: 100%;
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .hot-keywords b {
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
+
+      .hot-keyword-list {
+        display: flex;
+        flex: 1 1 auto;
+        gap: 8px;
+        min-width: 0;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .hot-keyword-list::-webkit-scrollbar {
+        display: none;
       }
 
       .hot-keywords a {
-        display: inline-block;
-        margin: 6px 8px 0 0;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
         padding: 5px 10px;
         border-radius: 999px;
         background: #f8fafc;
         color: var(--blue-800);
+        white-space: nowrap;
+        scroll-snap-align: start;
       }
 
       .strip-title br {
@@ -2204,7 +2265,7 @@
 
   <section class="hero">
     <div class="hero-slide active">
-      <img src="./assets/images/banner-2.png" alt="hero image" class="hero-img w-100 object-fit-cover" />
+      <img src="./assets/images/newnewBaner.jpg" alt="中彰投培訓資源一站探索，整合訓練課程、產業資源與最新動態" class="hero-img w-100 object-fit-cover" />
     </div>
   </section>
 
@@ -2266,14 +2327,150 @@
               style="background: var(--orange);">搜尋</button>
           </div>
           <p class="hot-keywords col-12"><b>熱門關鍵字：</b>
-            <a href="./pages/training.html?searchBy=title&amp;q=智慧製造">智慧製造</a>　
-            <a href="./pages/training.html?searchBy=title&amp;q=CNC">CNC</a>　
-            <a href="./pages/training.html?searchBy=title&amp;q=機械設計">機械設計</a>　
-            <a href="./pages/training.html?searchBy=title&amp;q=AI應用">AI應用</a>　
-            <a href="./pages/training.html?searchBy=title&amp;q=自動化">自動化</a>　
-            <a href="./pages/training.html?searchBy=title&amp;q=工業4.0">工業4.0</a>
+            <span class="hot-keyword-list">
+              <a href="./pages/training.html?searchBy=title&amp;q=智慧製造">智慧製造</a>
+              <a href="./pages/training.html?searchBy=title&amp;q=CNC">CNC</a>
+              <a href="./pages/training.html?searchBy=title&amp;q=機械設計">機械設計</a>
+              <a href="./pages/training.html?searchBy=title&amp;q=AI應用">AI應用</a>
+              <a href="./pages/training.html?searchBy=title&amp;q=自動化">自動化</a>
+              <a href="./pages/training.html?searchBy=title&amp;q=工業4.0">工業4.0</a>
+            </span>
           </p>
         </form>
+      </div>
+    </section>
+
+
+    <section class="course-section">
+      <div class="panel">
+        <div class="panel-title">
+          <h2>課程推薦</h2><a class="more site-more" href="./pages/training.html"><span>更多課程</span><svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg></a>
+        </div>
+        <div class="course-grid">
+          <a class="course-card" href="./pages/training-detail.html?id=courses-005">
+            <div class="course-img"
+              style="background-image:url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=900&auto=format&fit=crop')">
+              <span class="tag is-open">報名中</span>
+            </div>
+            <div class="course-body">
+              <h3>設備工程師培訓班第 01 期招生</h3>
+              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
+                  fill="lightgray">
+                  <path
+                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
+                </svg> 2026/11/12 – 2027/01/13</p>
+              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640">
+                  <path
+                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
+                </svg> 逢甲大學</p>
+              <div class="course-action"><span class="course-type">實體課程</span></div>
+            </div>
+          </a>
+          <a class="course-card" href="./pages/training-detail.html?id=courses-006">
+            <div class="course-img"
+              style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900&auto=format&fit=crop')">
+              <span class="tag is-open">報名中</span>
+            </div>
+            <div class="course-body">
+              <h3>智慧製造 AI 應用人才培訓班第 01 期招生</h3>
+              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
+                  fill="lightgray">
+                  <path
+                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
+                </svg> 2026/11/19 – 2027/01/29</p>
+              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640">
+                  <path
+                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
+                </svg>逢甲大學</p>
+              <div class="course-action"><span class="course-type">實體課程</span></div>
+            </div>
+          </a>
+          <a class="course-card" href="./pages/training-detail.html?id=courses-004">
+            <div class="course-img"
+              style="background-image:url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=900&auto=format&fit=crop')">
+              <span class="tag">熱門</span>
+            </div>
+            <div class="course-body">
+              <h3>精密量測與品質管理實務班招生</h3>
+              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
+                  fill="lightgray">
+                  <path
+                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
+                </svg> 2026/09/02 – 09/05</p>
+              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640">
+                  <path
+                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
+                </svg> 中部產業人才培訓中心</p>
+              <div class="course-action"><span class="course-type">實體課程</span></div>
+            </div>
+          </a>
+          <a class="course-card" href="./pages/training-detail.html?id=courses-002">
+            <div class="course-img"
+              style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop')">
+              <span class="tag yellow">精密加工</span>
+            </div>
+            <div class="course-body">
+              <h3>智慧製造與 IoT 應用實務班招生</h3>
+              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
+                  fill="lightgray">
+                  <path
+                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
+                </svg> 2026/08/18 – 08/22</p>
+              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640">
+                  <path
+                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
+                </svg> 國立科技大學</p>
+              <div class="course-action"><span class="course-type">遠距課程</span></div>
+            </div>
+          </a>
+          <a class="course-card" href="./pages/training-detail.html?id=courses-003">
+            <div class="course-img"
+              style="background-image:url('https://images.unsplash.com/photo-1565688534245-05d6b5be184a?q=80&w=900&auto=format&fit=crop')">
+              <span class="tag">熱門</span>
+            </div>
+            <div class="course-body">
+              <h3>機械手臂基礎整合應用班招生</h3>
+              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
+                  fill="lightgray">
+                  <path
+                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
+                </svg> 2026/08/24 – 08/28</p>
+              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640
+                  640">
+                  <path
+                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
+                </svg> 彰化師範大學</p>
+              <div class="course-action"><span class="course-type">實體課程</span></div>
+            </div>
+          </a>
+          <a class="course-card" href="./pages/training-detail.html?id=courses-001">
+            <div class="course-img"
+              style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900&auto=format&fit=crop')">
+              <span class="tag teal">機器人整合</span>
+            </div>
+            <div class="course-body">
+              <h3>AI 視覺檢測入門實作班開始招生</h3>
+              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
+                  fill="lightgray">
+                  <path
+                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
+                </svg> 2026/08/06 – 08/12</p>
+              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640
+                  640">
+                  <path
+                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
+                </svg> 南開科技大學</p>
+              <div class="course-action"><span class="course-type">遠距課程</span></div>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -2513,138 +2710,6 @@
       </div>
     </section>
 
-    <section class="course-section">
-      <div class="panel">
-        <div class="panel-title">
-          <h2>課程推薦</h2><a class="more site-more" href="./pages/training.html"><span>更多課程</span><svg width="15px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg></a>
-        </div>
-        <div class="course-grid">
-          <a class="course-card" href="./pages/training-detail.html?id=courses-005">
-            <div class="course-img"
-              style="background-image:url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=900&auto=format&fit=crop')">
-              <span class="tag is-open">報名中</span>
-            </div>
-            <div class="course-body">
-              <h3>設備工程師培訓班第 01 期招生</h3>
-              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
-                  fill="lightgray">
-                  <path
-                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
-                </svg> 2026/11/12 – 2027/01/13</p>
-              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 640 640">
-                  <path
-                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
-                </svg> 逢甲大學</p>
-              <div class="course-action"><span class="course-type">實體課程</span></div>
-            </div>
-          </a>
-          <a class="course-card" href="./pages/training-detail.html?id=courses-006">
-            <div class="course-img"
-              style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900&auto=format&fit=crop')">
-              <span class="tag is-open">報名中</span>
-            </div>
-            <div class="course-body">
-              <h3>智慧製造 AI 應用人才培訓班第 01 期招生</h3>
-              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
-                  fill="lightgray">
-                  <path
-                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
-                </svg> 2026/11/19 – 2027/01/29</p>
-              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 640 640">
-                  <path
-                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
-                </svg>逢甲大學</p>
-              <div class="course-action"><span class="course-type">實體課程</span></div>
-            </div>
-          </a>
-          <a class="course-card" href="./pages/training-detail.html?id=courses-004">
-            <div class="course-img"
-              style="background-image:url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=900&auto=format&fit=crop')">
-              <span class="tag">熱門</span>
-            </div>
-            <div class="course-body">
-              <h3>精密量測與品質管理實務班招生</h3>
-              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
-                  fill="lightgray">
-                  <path
-                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
-                </svg> 2026/09/02 – 09/05</p>
-              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 640 640">
-                  <path
-                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
-                </svg> 中部產業人才培訓中心</p>
-              <div class="course-action"><span class="course-type">實體課程</span></div>
-            </div>
-          </a>
-          <a class="course-card" href="./pages/training-detail.html?id=courses-002">
-            <div class="course-img"
-              style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop')">
-              <span class="tag yellow">精密加工</span>
-            </div>
-            <div class="course-body">
-              <h3>智慧製造與 IoT 應用實務班招生</h3>
-              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
-                  fill="lightgray">
-                  <path
-                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
-                </svg> 2026/08/18 – 08/22</p>
-              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 640 640">
-                  <path
-                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
-                </svg> 國立科技大學</p>
-              <div class="course-action"><span class="course-type">遠距課程</span></div>
-            </div>
-          </a>
-          <a class="course-card" href="./pages/training-detail.html?id=courses-003">
-            <div class="course-img"
-              style="background-image:url('https://images.unsplash.com/photo-1565688534245-05d6b5be184a?q=80&w=900&auto=format&fit=crop')">
-              <span class="tag">熱門</span>
-            </div>
-            <div class="course-body">
-              <h3>機械手臂基礎整合應用班招生</h3>
-              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
-                  fill="lightgray">
-                  <path
-                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
-                </svg> 2026/08/24 – 08/28</p>
-              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640
-                  640">
-                  <path
-                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
-                </svg> 彰化師範大學</p>
-              <div class="course-action"><span class="course-type">實體課程</span></div>
-            </div>
-          </a>
-          <a class="course-card" href="./pages/training-detail.html?id=courses-001">
-            <div class="course-img"
-              style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900&auto=format&fit=crop')">
-              <span class="tag teal">機器人整合</span>
-            </div>
-            <div class="course-body">
-              <h3>AI 視覺檢測入門實作班開始招生</h3>
-              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
-                  fill="lightgray">
-                  <path
-                    d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288C167.2 288 160 295.2 160 304zM288 304L288 336C288 344.8 295.2 352 304 352L336 352C344.8 352 352 344.8 352 336L352 304C352 295.2 344.8 288 336 288L304 288C295.2 288 288 295.2 288 304zM432 288C423.2 288 416 295.2 416 304L416 336C416 344.8 423.2 352 432 352L464 352C472.8 352 480 344.8 480 336L480 304C480 295.2 472.8 288 464 288L432 288zM160 432L160 464C160 472.8 167.2 480 176 480L208 480C216.8 480 224 472.8 224 464L224 432C224 423.2 216.8 416 208 416L176 416C167.2 416 160 423.2 160 432zM304 416C295.2 416 288 423.2 288 432L288 464C288 472.8 295.2 480 304 480L336 480C344.8 480 352 472.8 352 464L352 432C352 423.2 344.8 416 336 416L304 416zM416 432L416 464C416 472.8 423.2 480 432 480L464 480C472.8 480 480 472.8 480 464L480 432C480 423.2 472.8 416 464 416L432 416C423.2 416 416 423.2 416 432z" />
-                </svg> 2026/08/06 – 08/12</p>
-              <p><svg width="15px" height="15px" fill="lightgray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640
-                  640">
-                  <path
-                    d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z" />
-                </svg> 南開科技大學</p>
-              <div class="course-action"><span class="course-type">遠距課程</span></div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
 
     <section class="bottom-grid">
       <div class="panel home-knowledge-panel">
@@ -2704,14 +2769,7 @@
             </svg>
           </a>
         </div>
-        <button type="button" class="video-main" data-home-video
-          data-video-id="qvl7LGweclc"
-          data-video-title="勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】介紹影片"
-          data-video-series="據點講堂"
-          data-video-date="2026-08-10"
-          data-video-duration="02:07"
-          data-video-summary="逢甲大學承辦勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】介紹影片。"
-          data-video-external="https://www.youtube.com/watch?v=qvl7LGweclc"
+        <a class="video-main" href="./pages/videos.html?video=video-003"
           aria-label="播放精選影片：勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】介紹影片">
           <span class="video-main-cover">
             <img src="https://img.youtube.com/vi/qvl7LGweclc/hqdefault.jpg" alt="" loading="lazy" />
@@ -2720,32 +2778,18 @@
           <span class="home-video-play" aria-hidden="true"></span>
           <span class="home-video-title">機械智造轉型服務據點介紹影片</span>
           <span class="home-video-duration">02:07</span>
-        </button>
+        </a>
         <div class="video-list">
-          <button type="button" class="video-mini" data-home-video
-            data-video-id="lUYULV5bgy4"
-            data-video-title="臺中市政府勞工局創新人才培育暨職能提升輔導計畫114年青年前進重點產業工作坊"
-            data-video-series="活動紀實"
-            data-video-date="2026-08-10"
-            data-video-duration="01:50"
-            data-video-summary="逢甲大學承辦臺中市政府勞工局創新人才培育暨職能提升輔導計畫，記錄青年前進重點產業工作坊活動內容。"
-            data-video-external="https://www.youtube.com/watch?v=lUYULV5bgy4"
+          <a class="video-mini" href="./pages/videos.html?video=video-001"
             aria-label="播放影片：臺中市政府勞工局創新人才培育暨職能提升輔導計畫114年青年前進重點產業工作坊"><span class="video-mini-cover"><img
                 src="https://img.youtube.com/vi/lUYULV5bgy4/hqdefault.jpg" alt="" loading="lazy" /></span><span
               class="home-video-play" aria-hidden="true"></span><span class="home-video-title">青年前進重點產業工作坊</span><span
-              class="home-video-duration">01:50</span></button>
-          <button type="button" class="video-mini" data-home-video
-            data-video-id="w9zqkppWoGU"
-            data-video-title="勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】114年扎根計畫"
-            data-video-series="據點講堂"
-            data-video-date="2026-08-10"
-            data-video-duration="01:25"
-            data-video-summary="勞動部勞動力發展署中彰投分署辦理【機械智造轉型服務據點】114年扎根計畫說明。"
-            data-video-external="https://www.youtube.com/watch?v=w9zqkppWoGU"
+              class="home-video-duration">01:50</span></a>
+          <a class="video-mini" href="./pages/videos.html?video=video-002"
             aria-label="播放影片：勞動部勞動力發展署中彰投分署【機械智造轉型服務據點】114年扎根計畫"><span class="video-mini-cover"><img
                 src="https://img.youtube.com/vi/w9zqkppWoGU/hqdefault.jpg" alt="" loading="lazy" /></span><span
               class="home-video-play" aria-hidden="true"></span><span class="home-video-title">機械智造轉型服務據點114年扎根計畫</span><span
-              class="home-video-duration">01:25</span></button>
+              class="home-video-duration">01:25</span></a>
         </div>
       </div>
       <aside class="aside-stack">
@@ -2762,6 +2806,10 @@
         <div class="panel contact-box">
           <a class="contact-card-link" href="./pages/contact.html" aria-label="查看完整聯絡資訊"></a>
           <h2 class="fw-bolder">聯絡我們</h2>
+          <p class="contact-unit">
+            <span class="contact-unit-label">聯絡單位</span>
+            <strong class="contact-unit-name">逢甲大學推廣教育中心</strong>
+          </p>
           <p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#ffffff" width="20" height="20">
               <path
@@ -2850,30 +2898,8 @@
     </svg>
   </button>
 
-  <div class="modal fade video-modal" id="videoModal" tabindex="-1" aria-labelledby="videoModalTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="videoModalTitle">影片標題</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉影片"></button>
-        </div>
-        <div class="modal-body">
-          <div class="video-player" id="videoPlayer"></div>
-          <div class="video-modal-copy">
-            <p class="video-modal-meta" id="videoModalMeta"></p>
-            <p class="video-modal-summary" id="videoModalSummary"></p>
-            <a class="site-button site-button-secondary" id="videoExternalLink" href="#" target="_blank"
-              rel="noopener noreferrer">前往影片平台觀看</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script src="./assets/js/count-up.js"></script>
   <script src="./assets/js/site.js"></script>
-  <script src="./assets/js/home-video-modal.js"></script>
   <script>
     const slides = document.querySelectorAll('.hero-slide')
     const backToTopButton = document.querySelector('.back-to-top')
