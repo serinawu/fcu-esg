@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="機械智造轉型服務據點訓練資源">
-  <title>訓練資源｜機械智造轉型-訓練資源地圖</title>
+  <title>訓練資源｜機械製造轉型服務據點</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="../assets/css/base.css">
@@ -17,8 +17,8 @@
   <header class="site-header">
     <div class="site-container header-inner">
       <a class="brand" href="../index.html">
-        <img class="brand-logo" src="../assets/images/logo.png" alt="機械智造轉型-訓練資源地圖標誌">
-        <span class="brand-copy"><strong class="brand-title">機械智造轉型-訓練資源地圖</strong><span class="brand-subtitle">Intelligent Machinery Regional Industry Training Center For Mapping Resources</span></span>
+        <img class="brand-logo" src="../assets/images/logo.png" alt="機械製造轉型服務據點標誌">
+        <span class="brand-copy"><strong class="brand-title">機械製造轉型服務據點</strong><span class="brand-subtitle">Intelligent Machinery Regional Industry Training Center For Mapping Resources</span></span>
       </a>
       <button class="nav-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer"
         aria-controls="mobileNavDrawer" aria-label="開啟主選單">
@@ -46,7 +46,7 @@
     </div>
   </header>
   <div class="offcanvas offcanvas-end mobile-drawer" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
-    <div class="offcanvas-header"><h2 class="mobile-drawer-title" id="mobileNavDrawerLabel">機械智造轉型-訓練資源地圖</h2><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="關閉"></button></div>
+    <div class="offcanvas-header"><h2 class="mobile-drawer-title" id="mobileNavDrawerLabel">機械製造轉型服務據點</h2><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="關閉"></button></div>
     <div class="offcanvas-body">
       <nav class="mobile-nav" id="mobileNavAccordion" aria-label="手機主選單">
         <a class="mobile-nav-link" href="../index.html">首頁</a>
@@ -69,35 +69,18 @@
     <div class="site-container">
       <div class="training-toolbar">
         <div>
-          <p class="training-toolbar-label">課程狀態</p>
-          <nav aria-label="課程狀態"><ul class="training-status-nav" id="trainingStatusNav"></ul></nav>
+          <p class="training-toolbar-label">資源類別</p>
+          <nav aria-label="資源類別"><ul class="training-status-nav" id="trainingResourceNav"></ul></nav>
         </div>
       </div>
       <section class="training-filter-panel" aria-labelledby="trainingFilterTitle">
         <button class="training-filter-toggle" id="trainingFilterToggle" type="button" aria-expanded="false"
           aria-controls="trainingFilterBody">
-          <span><strong id="trainingFilterTitle">篩選訓練資源</strong><span id="trainingFilterSummary">依類別、類型、區域或日期搜尋</span></span>
+          <span><strong id="trainingFilterTitle">篩選訓練資源</strong><span id="trainingFilterSummary">依類型、區域、日期或關鍵字搜尋</span></span>
           <span class="training-filter-toggle-icon" aria-hidden="true"></span>
         </button>
         <div class="training-filter-body" id="trainingFilterBody">
           <form class="training-filter-form" id="trainingSearchForm" role="search">
-            <div class="training-filter-field">
-              <label for="trainingResourceCategory">資源類別</label>
-              <select class="site-filter-control" id="trainingResourceCategory" name="resource">
-                <option value="">全部</option>
-                <option value="site-plan">據點計畫</option>
-                <option value="site-free">免費活動／課程</option>
-                <option value="talent-program">產業投資人才方案</option>
-              </select>
-            </div>
-            <fieldset class="training-filter-field training-choice-field">
-              <legend>資源類型</legend>
-              <div class="training-choice-group">
-                <label><input type="radio" name="mode" value="" checked><span>全部</span></label>
-                <label><input type="radio" name="mode" value="online"><span>線上</span></label>
-                <label><input type="radio" name="mode" value="physical"><span>實體</span></label>
-              </div>
-            </fieldset>
             <fieldset class="training-filter-field training-choice-field training-region-field">
               <legend>課程區域</legend>
               <div class="training-choice-group">
@@ -105,6 +88,14 @@
                 <label><input type="radio" name="region" value="taichung"><span>臺中</span></label>
                 <label><input type="radio" name="region" value="changhua"><span>彰化</span></label>
                 <label><input type="radio" name="region" value="nantou"><span>南投</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="training-filter-field training-choice-field">
+              <legend>資源類型</legend>
+              <div class="training-choice-group">
+                <label><input type="radio" name="mode" value="" checked><span>全部</span></label>
+                <label><input type="radio" name="mode" value="online"><span>線上</span></label>
+                <label><input type="radio" name="mode" value="physical"><span>實體</span></label>
               </div>
             </fieldset>
             <fieldset class="training-filter-field training-date-field">
@@ -144,6 +135,13 @@
         <span class="empty-state-icon" aria-hidden="true">i</span><h2>目前尚無課程</h2><p>請稍後再回來查看。</p>
         <a class="site-button site-button-secondary" href="training.html">查看全部課程</a>
       </section>
+      <section class="training-recommendations" id="trainingRecommendations" aria-labelledby="trainingRecommendationsTitle" hidden>
+        <div class="training-recommendations-heading">
+          <div><span>Recommended</span><h2 id="trainingRecommendationsTitle">近期推薦課程</h2></div>
+          <p>以下依課程狀態與近期開課時間排序。</p>
+        </div>
+        <ol class="training-list" id="trainingRecommendationList"></ol>
+      </section>
     </div>
   </main>
 
@@ -152,7 +150,7 @@
       <div class="footer-brand">
         <img class="footer-logo" src="../assets/images/logo-2.png" alt="">
         <div>
-          <p class="footer-brand-title">機械智造轉型-訓練資源地圖</p>
+          <p class="footer-brand-title">機械製造轉型服務據點</p>
           <p class="footer-brand-subtitle">Intelligent Machinery Regional Industry Training Center For Mapping Resources</p>
         </div>
       </div>
@@ -175,7 +173,7 @@
         </details>
         <details class="footer-nav footer-nav-group">
           <summary class="footer-nav-summary">訓練資源</summary>
-          <a href="training.html?status=open">熱門課程</a>
+          <a href="training.html?resource=unemployed-training">失業者職前訓練</a>
           <a href="training.html">全部課程</a>
         </details>
       </nav>

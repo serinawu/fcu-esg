@@ -268,6 +268,50 @@
   list-style: none;
 }
 
+.training-recommendations {
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.training-recommendations[hidden] {
+  display: none;
+}
+
+.training-recommendations-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.training-recommendations-heading span {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--orange-dark);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.training-recommendations-heading h2,
+.training-recommendations-heading p {
+  margin: 0;
+}
+
+.training-recommendations-heading h2 {
+  color: var(--blue-800);
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.training-recommendations-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .training-card {
   --site-card-overflow: visible;
   display: grid;
@@ -420,6 +464,12 @@
 }
 
 @media (max-width: 767px) {
+  .training-recommendations-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .training-filter-body {
     padding: 18px;
   }
