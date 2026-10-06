@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>首頁｜機械製造轉型服務據點</title>
+  <title>V3 Editorial 首頁提案｜機械製造轉型服務據點</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/base.css">
@@ -2144,42 +2144,13 @@
         margin-top: 4px;
       }
     }
-
-    .brand-copy {
-      flex-basis: 210px;
-      width: 210px;
-    }
-
-    .brand-title {
-      font-size: 18px;
-      letter-spacing: .17em;
-      white-space: nowrap;
-    }
-
-    .brand-subtitle {
-      width: 210px;
-      max-width: 210px;
-      font-size: 8px;
-      letter-spacing: .2em;
-      line-height: 1.35;
-    }
-
-    @media (max-width: 767px) {
-      .brand-copy {
-        flex: 1 1 auto;
-        width: auto;
-      }
-
-      .brand-title {
-        letter-spacing: .03em;
-      }
-    }
   </style>
   <!-- DESIGN PREVIEW VERSION SWITCHER -->
   <link rel="stylesheet" href="./assets/css/preview-version-switcher.css">
+  <link rel="stylesheet" href="./assets/css/homepage-v3-editorial.css">
 </head>
 
-<body>
+<body class="homepage-preview homepage-preview-editorial">
   <a class="skip-link" href="#main-content">跳至主要內容</a>
   <header class="site-header">
     <div class="top-utility d-none">
@@ -2217,10 +2188,9 @@
     </div>
     <div class="site-container header-inner">
       <a class="brand" href="./index.html">
-        <img class="brand-logo" src="./assets/images/logo.png" alt="機械製造轉型服務據點標誌">
+        <img class="brand-logo" src="./assets/images/logo-2.png" alt="機械製造轉型服務據點標誌">
         <span class="brand-copy">
           <strong class="brand-title">機械製造轉型服務據點</strong>
-          <span class="brand-subtitle">Intelligent Machinery Regional Industry<br>Training Center For Mapping Resources</span>
         </span>
       </a>
       <button class="nav-toggle" type="button" data-bs-toggle="offcanvas"
@@ -2257,6 +2227,7 @@
           <li><a href="./pages/contact.html" class="desktop-nav-link">聯絡我們</a></li>
         </ul>
       </nav>
+      <button class="v3-header-newsletter" type="button" data-v3-newsletter-open>訂閱電子報</button>
     </div>
   </header>
 
@@ -2291,6 +2262,7 @@
         <a class="mobile-nav-link" href="./pages/training.html">訓練資源</a>
         <a class="mobile-nav-link" href="./pages/videos.html">影片專區</a>
         <a class="mobile-nav-link" href="./pages/contact.html">聯絡我們</a>
+        <button class="v3-mobile-newsletter" type="button" data-v3-newsletter-open>訂閱電子報</button>
       </nav>
     </div>
   </div>
@@ -2319,6 +2291,27 @@
       <span class="marquee-item">廠商職缺媒合</span>
       <span class="marquee-item">遠距學習課程</span>
       <span class="marquee-item">產業轉型輔導</span>
+    </div>
+  </section>
+
+  <section class="v3-stats-band" aria-label="中彰投地區累計成果">
+    <div class="v3-stats-band__inner">
+      <div class="v3-stat">
+        <strong data-aggregate-stat="courses">0</strong>
+        <span>累計訓練課程</span>
+      </div>
+      <div class="v3-stat">
+        <strong data-aggregate-stat="participants">0</strong>
+        <span>累計參訓人次</span>
+      </div>
+      <div class="v3-stat">
+        <strong data-aggregate-stat="jobs">0</strong>
+        <span>累計就業機會</span>
+      </div>
+      <div class="v3-stat">
+        <strong data-aggregate-stat="regions">0</strong>
+        <span>服務縣市</span>
+      </div>
     </div>
   </section>
 
@@ -2389,6 +2382,7 @@
             </div>
             <div class="course-body">
               <h3>設備工程師培訓班第 01 期招生</h3>
+              <p class="course-summary">結合電子電路、機械結構、設備保養、感測器與半導體製程，培養機械及半導體產業設備工程實務能力。</p>
               <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="15px" height="15px"
                   fill="lightgray">
                   <path
@@ -2677,6 +2671,7 @@
           </a>
         </div>
       </div>
+      <div class="section-side-stack">
       <div class="panel">
         <div class="panel-title">
           <h2>活動花絮</h2>
@@ -2740,10 +2735,6 @@
           </button>
         </div>
       </div>
-    </section>
-
-
-    <section class="bottom-grid">
       <div class="panel home-knowledge-panel">
         <div class="panel-title">
           <h2>趨勢知識</h2>
@@ -2790,6 +2781,11 @@
           </a>
         </div>
       </div>
+      </div>
+    </section>
+
+
+    <section class="bottom-grid">
       <div class="panel home-video-panel">
         <div class="panel-title">
           <h2>影片專區</h2>
@@ -2876,6 +2872,27 @@
     </section>
   </main>
 
+  <dialog class="v3-newsletter-dialog" id="v3NewsletterDialog" aria-labelledby="v3NewsletterDialogTitle">
+    <button class="v3-newsletter-dialog__close" type="button" data-v3-newsletter-close aria-label="關閉訂閱視窗">×</button>
+    <div class="v3-newsletter-dialog__form-view" data-v3-newsletter-form-view>
+      <p class="v3-newsletter-dialog__kicker">NEWSLETTER / 電子報</p>
+      <h2 id="v3NewsletterDialogTitle">掌握產業與課程動態</h2>
+      <p>輸入 Email，接收最新課程、活動與產業趨勢更新。</p>
+      <form class="v3-newsletter-dialog__form" id="v3NewsletterForm">
+        <label for="v3NewsletterEmail">EMAIL ADDRESS</label>
+        <input id="v3NewsletterEmail" name="email" type="email" placeholder="name@example.com"
+          autocomplete="email" required>
+        <button type="submit">確認訂閱</button>
+      </form>
+    </div>
+    <div class="v3-newsletter-dialog__success" data-v3-newsletter-success hidden>
+      <span aria-hidden="true">✓</span>
+      <h2>訂閱成功</h2>
+      <p>感謝您的訂閱，後續最新資訊將寄送至您填寫的 Email。</p>
+      <button type="button" data-v3-newsletter-close>完成</button>
+    </div>
+  </dialog>
+
   <footer class="site-footer">
     <div class="site-container footer-main">
       <div class="footer-brand">
@@ -2927,12 +2944,12 @@
   <aside class="preview-version-switcher" aria-label="首頁視覺版本切換">
     <span class="preview-version-switcher__label" aria-hidden="true">STYLE</span>
     <nav class="preview-version-switcher__nav" aria-label="選擇首頁視覺版本">
-      <a class="preview-version-switcher__link preview-version-switcher__link--current is-active"
-        href="./index.html" aria-current="page"><span>01</span>現行版</a>
+      <a class="preview-version-switcher__link preview-version-switcher__link--current"
+        href="./index.html"><span>01</span>現行版</a>
       <a class="preview-version-switcher__link preview-version-switcher__link--v2"
         href="./homepage-v2-professional-preview.html"><span>02</span>V2</a>
-      <a class="preview-version-switcher__link preview-version-switcher__link--v3"
-        href="./homepage-v3-editorial-preview.html"><span>03</span>V3</a>
+      <a class="preview-version-switcher__link preview-version-switcher__link--v3 is-active"
+        href="./homepage-v3-editorial-preview.html" aria-current="page"><span>03</span>V3</a>
     </nav>
   </aside>
   <!-- /DESIGN PREVIEW VERSION SWITCHER -->
@@ -2951,7 +2968,36 @@
     const backToTopButton = document.querySelector('.back-to-top')
     const bottomGridSection = document.querySelector('.bottom-grid')
     const homeTrainingSearch = document.querySelector('#homeTrainingSearch')
+    const v3NewsletterDialog = document.querySelector('#v3NewsletterDialog')
+    const v3NewsletterForm = document.querySelector('#v3NewsletterForm')
+    const v3NewsletterFormView = document.querySelector('[data-v3-newsletter-form-view]')
+    const v3NewsletterSuccess = document.querySelector('[data-v3-newsletter-success]')
     let current = 0
+
+    document.querySelectorAll('[data-v3-newsletter-open]').forEach((button) => {
+      button.addEventListener('click', () => {
+        v3NewsletterForm.reset()
+        v3NewsletterFormView.hidden = false
+        v3NewsletterSuccess.hidden = true
+        v3NewsletterDialog.showModal()
+        document.querySelector('#v3NewsletterEmail')?.focus()
+      })
+    })
+
+    document.querySelectorAll('[data-v3-newsletter-close]').forEach((button) => {
+      button.addEventListener('click', () => v3NewsletterDialog.close())
+    })
+
+    v3NewsletterDialog?.addEventListener('click', (event) => {
+      if (event.target === v3NewsletterDialog) v3NewsletterDialog.close()
+    })
+
+    v3NewsletterForm?.addEventListener('submit', (event) => {
+      event.preventDefault()
+      if (!v3NewsletterForm.reportValidity()) return
+      v3NewsletterFormView.hidden = true
+      v3NewsletterSuccess.hidden = false
+    })
 
     homeTrainingSearch?.addEventListener('submit', (event) => {
       event.preventDefault()
@@ -2974,6 +3020,18 @@
         return response.json()
       })
       .then(({ regions = [] }) => {
+        const aggregate = regions.reduce((total, region) => {
+          Object.entries(region.statistics || {}).forEach(([key, value]) => {
+            total[key] = (total[key] || 0) + Number(value || 0)
+          })
+          return total
+        }, { regions: regions.length })
+
+        Object.entries(aggregate).forEach(([key, value]) => {
+          const target = document.querySelector(`[data-aggregate-stat="${key}"]`)
+          window.FCUCountUp.animate(target, value)
+        })
+
         regions.forEach((region) => {
           const card = document.querySelector(`[data-region-card="${region.code}"]`)
           if (!card) return

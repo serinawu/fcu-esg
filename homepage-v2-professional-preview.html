@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>首頁｜機械製造轉型服務據點</title>
+  <title>V2 Professional 首頁提案｜機械製造轉型服務據點</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/base.css">
@@ -2144,42 +2144,13 @@
         margin-top: 4px;
       }
     }
-
-    .brand-copy {
-      flex-basis: 210px;
-      width: 210px;
-    }
-
-    .brand-title {
-      font-size: 18px;
-      letter-spacing: .17em;
-      white-space: nowrap;
-    }
-
-    .brand-subtitle {
-      width: 210px;
-      max-width: 210px;
-      font-size: 8px;
-      letter-spacing: .2em;
-      line-height: 1.35;
-    }
-
-    @media (max-width: 767px) {
-      .brand-copy {
-        flex: 1 1 auto;
-        width: auto;
-      }
-
-      .brand-title {
-        letter-spacing: .03em;
-      }
-    }
   </style>
   <!-- DESIGN PREVIEW VERSION SWITCHER -->
   <link rel="stylesheet" href="./assets/css/preview-version-switcher.css">
+  <link rel="stylesheet" href="./assets/css/homepage-v2-professional.css">
 </head>
 
-<body>
+<body class="homepage-preview homepage-preview-professional">
   <a class="skip-link" href="#main-content">跳至主要內容</a>
   <header class="site-header">
     <div class="top-utility d-none">
@@ -2220,7 +2191,6 @@
         <img class="brand-logo" src="./assets/images/logo.png" alt="機械製造轉型服務據點標誌">
         <span class="brand-copy">
           <strong class="brand-title">機械製造轉型服務據點</strong>
-          <span class="brand-subtitle">Intelligent Machinery Regional Industry<br>Training Center For Mapping Resources</span>
         </span>
       </a>
       <button class="nav-toggle" type="button" data-bs-toggle="offcanvas"
@@ -2301,30 +2271,35 @@
     </div>
   </section>
 
-  <section class="marquee-band" aria-label="熱門主題跑馬燈">
-    <div class="marquee-track">
-      <span class="marquee-item">AI 智慧製造應用</span>
-      <span class="marquee-item">CNC 精密加工技術</span>
-      <span class="marquee-item">工業機器手臂整合</span>
-      <span class="marquee-item">精密量測技術</span>
-      <span class="marquee-item">自動化系統設計</span>
-      <span class="marquee-item">廠商職缺媒合</span>
-      <span class="marquee-item">遠距學習課程</span>
-      <span class="marquee-item">產業轉型輔導</span>
-      <span class="marquee-item">AI 智慧製造應用</span>
-      <span class="marquee-item">CNC 精密加工技術</span>
-      <span class="marquee-item">工業機器手臂整合</span>
-      <span class="marquee-item">精密量測技術</span>
-      <span class="marquee-item">自動化系統設計</span>
-      <span class="marquee-item">廠商職缺媒合</span>
-      <span class="marquee-item">遠距學習課程</span>
-      <span class="marquee-item">產業轉型輔導</span>
+  <section class="v2-stats-band" aria-label="中彰投地區累計成果">
+    <div class="v2-stats-band__inner">
+      <div class="v2-stat">
+        <strong data-aggregate-stat="courses">0</strong>
+        <span>累計訓練課程</span>
+      </div>
+      <div class="v2-stat">
+        <strong data-aggregate-stat="participants">0</strong>
+        <span>累計參訓人次</span>
+      </div>
+      <div class="v2-stat">
+        <strong data-aggregate-stat="jobs">0</strong>
+        <span>累計就業機會</span>
+      </div>
+      <div class="v2-stat">
+        <strong data-aggregate-stat="regions">0</strong>
+        <span>服務縣市</span>
+      </div>
     </div>
   </section>
 
   <main class="container" id="main-content" tabindex="-1">
     <h1 class="visually-hidden">機械製造轉型服務據點</h1>
     <section class="search-panel">
+      <div class="v2-search-heading">
+        <p>COURSE SEARCH</p>
+        <h2>快速找到適合您的課程</h2>
+        <span>搜尋臺中、彰化、南投地區機械產業相關培訓資源</span>
+      </div>
       <div class="search-box">
         <form class="position-relative row" id="homeTrainingSearch">
           <div class="search-label position-absolute" style="left: 5px; top: 5px;">
@@ -2333,7 +2308,6 @@
                 <path
                   d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z" />
               </svg>
-              <span>訓練資源快速找</span>
             </span>
 
           </div>
@@ -2376,7 +2350,7 @@
     <section class="course-section">
       <div class="panel">
         <div class="panel-title">
-          <h2>課程推薦</h2><a class="more site-more" href="./pages/training.html"><span>更多課程</span><svg width="15px" height="10px" viewBox="0 0 13 10">
+          <h2>課程推薦</h2><a class="more site-more" href="./pages/training.html"><span>查看全部課程</span><svg width="15px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg></a>
@@ -2567,7 +2541,7 @@
         <div class="city-list">
           <article class="city-card" data-region-card="taichung">
             <div class="city-head theme-blue">臺中市<a class="light-btn" href="./pages/update.html?region=taichung"
-                aria-label="查看臺中市累計成果與目前公開內容">查看 →</a></div>
+                aria-label="查看臺中市累計成果與目前公開內容">查看<span aria-hidden="true">→</span></a></div>
             <div class="city-body">
               <div class="map-placeholder">
                 <svg class="region-map" viewBox="0 0 1515 666" aria-label="臺中市地圖區塊">
@@ -2584,7 +2558,7 @@
           </article>
           <article class="city-card" data-region-card="changhua">
             <div class="city-head theme-orange">彰化縣<a class="light-btn" href="./pages/update.html?region=changhua"
-                aria-label="查看彰化縣累計成果與目前公開內容">查看 →</a></div>
+                aria-label="查看彰化縣累計成果與目前公開內容">查看<span aria-hidden="true">→</span></a></div>
             <div class="city-body">
               <div class="map-placeholder">
                 <svg class="region-map" viewBox="0 0 732 686" aria-label="彰化縣地圖區塊">
@@ -2601,7 +2575,7 @@
           </article>
           <article class="city-card" data-region-card="nantou">
             <div class="city-head theme-green">南投縣<a class="light-btn" href="./pages/update.html?region=nantou"
-                aria-label="查看南投縣累計成果與目前公開內容">查看 →</a></div>
+                aria-label="查看南投縣累計成果與目前公開內容">查看<span aria-hidden="true">→</span></a></div>
             <div class="city-body">
               <div class="map-placeholder">
                 <svg class="region-map" viewBox="120 90 280 290" aria-label="南投縣地圖區塊">
@@ -2620,8 +2594,22 @@
       </div>
     </section>
 
-    <section class="section-grid">
-      <div class="panel panel-wide panel-scroll">
+    <section class="v2-content-hub" aria-labelledby="v2ContentHubTitle">
+      <div class="v2-content-hub__intro">
+        <p class="v2-content-hub__kicker">CONTENT</p>
+        <h2 id="v2ContentHubTitle">最新消息</h2>
+        <p class="v2-content-hub__description">掌握訓練資訊、活動紀錄、產業趨勢與影音內容。</p>
+        <div class="v2-content-tabs" role="tablist" aria-label="首頁內容分類">
+          <button type="button" role="tab" aria-selected="true" aria-controls="v2-panel-news" data-v2-tab="news">最新消息</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="v2-panel-gallery" data-v2-tab="gallery">活動花絮</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="v2-panel-insights" data-v2-tab="insights">趨勢知識</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="v2-panel-videos" data-v2-tab="videos">影片專區</button>
+        </div>
+        <a class="v2-content-hub__more" id="v2ContentHubMore" href="./pages/update.html?category=news">查看所有消息 →</a>
+      </div>
+
+      <section class="section-grid">
+      <div class="panel panel-wide panel-scroll" id="v2-panel-news" role="tabpanel" data-v2-tab-panel="news">
         <div class="panel-title">
           <h2>最新消息</h2>
           <a class="more site-more" href="./pages/update.html?category=news">
@@ -2677,7 +2665,7 @@
           </a>
         </div>
       </div>
-      <div class="panel">
+      <div class="panel" id="v2-panel-gallery" role="tabpanel" data-v2-tab-panel="gallery" hidden>
         <div class="panel-title">
           <h2>活動花絮</h2>
           <a class="more site-more" href="./pages/update.html?category=gallery"><span>更多</span>
@@ -2742,9 +2730,8 @@
       </div>
     </section>
 
-
     <section class="bottom-grid">
-      <div class="panel home-knowledge-panel">
+      <div class="panel home-knowledge-panel" id="v2-panel-insights" role="tabpanel" data-v2-tab-panel="insights" hidden>
         <div class="panel-title">
           <h2>趨勢知識</h2>
           <a class="more site-more" href="./pages/insights.html">
@@ -2790,7 +2777,7 @@
           </a>
         </div>
       </div>
-      <div class="panel home-video-panel">
+      <div class="panel home-video-panel" id="v2-panel-videos" role="tabpanel" data-v2-tab-panel="videos" hidden>
         <div class="panel-title">
           <h2>影片專區</h2>
           <a class="more site-more" href="./pages/videos.html">
@@ -2824,6 +2811,16 @@
               class="home-video-duration">01:25</span></a>
         </div>
       </div>
+      <section class="v2-newsletter-cta" aria-labelledby="v2NewsletterTitle">
+        <div class="v2-newsletter-cta__copy">
+          <h2 id="v2NewsletterTitle">訂閱電子報，掌握最新課程與據點資訊</h2>
+          <p>定期接收課程、活動與產業趨勢更新。</p>
+        </div>
+        <div class="v2-newsletter-cta__actions">
+          <button class="v2-newsletter-cta__primary" type="button" data-newsletter-open>立即訂閱</button>
+          <a class="v2-newsletter-cta__secondary" href="./pages/contact.html">聯絡我們</a>
+        </div>
+      </section>
       <aside class="aside-stack">
         <div class="panel">
           <h2 class="fw-bolder" style="color:var(--blue-800)">電子報訂閱</h2>
@@ -2874,7 +2871,29 @@
         </div>
       </aside>
     </section>
+    </section>
   </main>
+
+  <dialog class="v2-newsletter-dialog" id="v2NewsletterDialog" aria-labelledby="v2NewsletterDialogTitle">
+    <button class="v2-newsletter-dialog__close" type="button" data-newsletter-close aria-label="關閉訂閱視窗">×</button>
+    <div class="v2-newsletter-dialog__form-view" data-newsletter-form-view>
+      <p class="v2-newsletter-dialog__kicker">NEWSLETTER</p>
+      <h2 id="v2NewsletterDialogTitle">訂閱電子報</h2>
+      <p>輸入 Email，接收最新課程、活動與產業趨勢更新。</p>
+      <form class="v2-newsletter-dialog__form" id="v2NewsletterForm">
+        <label for="v2NewsletterEmail">Email</label>
+        <input id="v2NewsletterEmail" name="email" type="email" placeholder="name@example.com"
+          autocomplete="email" required>
+        <button type="submit">確認訂閱</button>
+      </form>
+    </div>
+    <div class="v2-newsletter-dialog__success" data-newsletter-success hidden>
+      <span aria-hidden="true">✓</span>
+      <h2>訂閱成功</h2>
+      <p>感謝您的訂閱，後續最新資訊將寄送至您填寫的 Email。</p>
+      <button type="button" data-newsletter-close>完成</button>
+    </div>
+  </dialog>
 
   <footer class="site-footer">
     <div class="site-container footer-main">
@@ -2927,10 +2946,10 @@
   <aside class="preview-version-switcher" aria-label="首頁視覺版本切換">
     <span class="preview-version-switcher__label" aria-hidden="true">STYLE</span>
     <nav class="preview-version-switcher__nav" aria-label="選擇首頁視覺版本">
-      <a class="preview-version-switcher__link preview-version-switcher__link--current is-active"
-        href="./index.html" aria-current="page"><span>01</span>現行版</a>
-      <a class="preview-version-switcher__link preview-version-switcher__link--v2"
-        href="./homepage-v2-professional-preview.html"><span>02</span>V2</a>
+      <a class="preview-version-switcher__link preview-version-switcher__link--current"
+        href="./index.html"><span>01</span>現行版</a>
+      <a class="preview-version-switcher__link preview-version-switcher__link--v2 is-active"
+        href="./homepage-v2-professional-preview.html" aria-current="page"><span>02</span>V2</a>
       <a class="preview-version-switcher__link preview-version-switcher__link--v3"
         href="./homepage-v3-editorial-preview.html"><span>03</span>V3</a>
     </nav>
@@ -2949,9 +2968,58 @@
   <script>
     const slides = document.querySelectorAll('.hero-slide')
     const backToTopButton = document.querySelector('.back-to-top')
-    const bottomGridSection = document.querySelector('.bottom-grid')
+    const bottomGridSection = document.querySelector('.v2-content-hub')
     const homeTrainingSearch = document.querySelector('#homeTrainingSearch')
+    const v2TabButtons = document.querySelectorAll('[data-v2-tab]')
+    const v2TabPanels = document.querySelectorAll('[data-v2-tab-panel]')
+    const v2HubTitle = document.querySelector('#v2ContentHubTitle')
+    const v2HubMore = document.querySelector('#v2ContentHubMore')
+    const newsletterDialog = document.querySelector('#v2NewsletterDialog')
+    const newsletterForm = document.querySelector('#v2NewsletterForm')
+    const newsletterFormView = document.querySelector('[data-newsletter-form-view]')
+    const newsletterSuccess = document.querySelector('[data-newsletter-success]')
     let current = 0
+
+    const v2TabMeta = {
+      news: { title: '最新消息', linkLabel: '查看所有消息 →', href: './pages/update.html?category=news' },
+      gallery: { title: '活動花絮', linkLabel: '查看所有活動 →', href: './pages/update.html?category=gallery' },
+      insights: { title: '趨勢知識', linkLabel: '查看所有文章 →', href: './pages/insights.html' },
+      videos: { title: '影片專區', linkLabel: '查看所有影片 →', href: './pages/videos.html' }
+    }
+
+    v2TabButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const selectedTab = button.dataset.v2Tab
+        v2TabButtons.forEach((item) => item.setAttribute('aria-selected', String(item === button)))
+        v2TabPanels.forEach((panel) => { panel.hidden = panel.dataset.v2TabPanel !== selectedTab })
+        v2HubTitle.textContent = v2TabMeta[selectedTab].title
+        v2HubMore.href = v2TabMeta[selectedTab].href
+        v2HubMore.textContent = v2TabMeta[selectedTab].linkLabel
+      })
+    })
+
+    document.querySelector('[data-newsletter-open]')?.addEventListener('click', () => {
+      newsletterForm.reset()
+      newsletterFormView.hidden = false
+      newsletterSuccess.hidden = true
+      newsletterDialog.showModal()
+      document.querySelector('#v2NewsletterEmail')?.focus()
+    })
+
+    document.querySelectorAll('[data-newsletter-close]').forEach((button) => {
+      button.addEventListener('click', () => newsletterDialog.close())
+    })
+
+    newsletterDialog?.addEventListener('click', (event) => {
+      if (event.target === newsletterDialog) newsletterDialog.close()
+    })
+
+    newsletterForm?.addEventListener('submit', (event) => {
+      event.preventDefault()
+      if (!newsletterForm.reportValidity()) return
+      newsletterFormView.hidden = true
+      newsletterSuccess.hidden = false
+    })
 
     homeTrainingSearch?.addEventListener('submit', (event) => {
       event.preventDefault()
@@ -2974,6 +3042,18 @@
         return response.json()
       })
       .then(({ regions = [] }) => {
+        const aggregate = regions.reduce((total, region) => {
+          Object.entries(region.statistics || {}).forEach(([key, value]) => {
+            total[key] = (total[key] || 0) + Number(value || 0)
+          })
+          return total
+        }, { regions: regions.length })
+
+        Object.entries(aggregate).forEach(([key, value]) => {
+          const target = document.querySelector(`[data-aggregate-stat="${key}"]`)
+          window.FCUCountUp.animate(target, value)
+        })
+
         regions.forEach((region) => {
           const card = document.querySelector(`[data-region-card="${region.code}"]`)
           if (!card) return
