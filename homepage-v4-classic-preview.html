@@ -895,6 +895,37 @@
       font-weight: 950;
     }
 
+    .newsletter-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .newsletter-preview-btn {
+      display: flex;
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: var(--blue-800);
+      border-radius: 8px;
+      transition: background-color .2s ease, transform .2s ease;
+    }
+
+    .newsletter-preview-btn svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .newsletter-preview-btn:hover,
+    .newsletter-preview-btn:focus-visible {
+      background: var(--orange);
+      transform: translateY(-1px);
+    }
+
     .more {
       display: flex;
       align-items: center;
@@ -2822,7 +2853,12 @@
       </div>
       <aside class="aside-stack">
         <div class="panel">
-          <h2 class="fw-bolder" style="color:var(--blue-800)">電子報訂閱</h2>
+          <div class="newsletter-panel-head">
+            <h2 class="fw-bolder" style="color:var(--blue-800)">電子報訂閱</h2>
+            <a class="newsletter-preview-btn" href="./prototypes/newsletter/newsletter-variants.html" target="_blank" rel="noopener noreferrer" aria-label="在新視窗開啟電子報預覽">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
           <p style="font-size:14px;line-height:1.7;color:var(--muted)">訂閱掌握最新課程、活動與產業資訊！</p>
           <div class="subscribe-row">
             <label class="visually-hidden" for="homeNewsletterEmail">電子報訂閱 Email</label>
