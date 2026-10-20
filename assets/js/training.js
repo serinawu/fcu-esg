@@ -36,9 +36,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const definitions = statusTool.definitions;
   const resourceDefinitions = [
     { value: "", label: "全部" },
-    { value: "site-plan", label: "據點計畫" },
-    { value: "site-free", label: "免費活動／課程" },
-    { value: "talent-program", label: "產業人才投資方案" },
     { value: "unemployed-training", label: "失業者職前訓練" },
     { value: "in-service-training", label: "在職者訓練" }
   ];
