@@ -52,13 +52,13 @@
 }
 
 .homepage-preview-professional .brand-copy {
-  flex-basis: 215px;
-  width: 215px;
+  flex-basis: 320px;
+  width: 320px;
 }
 
 .homepage-preview-professional .brand-title {
-  font-size: 19px;
-  letter-spacing: .12em;
+  font-size: 18px;
+  letter-spacing: .02em;
   white-space: nowrap;
 }
 
@@ -633,10 +633,6 @@
   background: var(--blue-900);
 }
 
-.homepage-preview-professional .footer-brand-title {
-  white-space: nowrap;
-}
-
 .homepage-preview-professional .footer-side {
   gap: 8px;
 }
@@ -1089,11 +1085,14 @@
   .homepage-preview-professional .brand-copy {
     flex: 1 1 auto;
     width: auto;
+    min-width: 0;
   }
 
   .homepage-preview-professional .brand-title {
-    font-size: 15px;
-    letter-spacing: .03em;
+    overflow: hidden;
+    font-size: 11px;
+    letter-spacing: 0;
+    text-overflow: ellipsis;
   }
 
   .homepage-preview-professional .footer-brand > div {
