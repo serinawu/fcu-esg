@@ -94,6 +94,16 @@
   color: #e11d2e;
 }
 
+.preview-version-switcher__link--v4 {
+  --version-color: #16835a;
+  --version-active-bg: #eaf6f0;
+  --version-active-accent: #0f5e3f;
+}
+
+.preview-version-switcher__link--v4 span {
+  color: #16835a;
+}
+
 .preview-version-switcher__link:hover,
 .preview-version-switcher__link:focus-visible {
   color: #171a1d;
